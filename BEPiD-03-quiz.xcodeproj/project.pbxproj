@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CFE57B101ABA2BD1008C09C3 /* QuestionsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B0F1ABA2BD1008C09C3 /* QuestionsProvider.m */; };
+		CFE57B131ABA2D15008C09C3 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B121ABA2D15008C09C3 /* Question.m */; };
+		CFE57B161ABA3012008C09C3 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B151ABA3012008C09C3 /* Answer.m */; };
+		CFE57B191ABA3215008C09C3 /* Question0.json in Resources */ = {isa = PBXBuildFile; fileRef = CFE57B181ABA3215008C09C3 /* Question0.json */; };
+		CFE57B1F1ABA3F59008C09C3 /* Json.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B1E1ABA3F59008C09C3 /* Json.m */; };
+		CFE57B241ABA440B008C09C3 /* StudentOpinion.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B231ABA440B008C09C3 /* StudentOpinion.m */; };
 		E831E99F1AB91F0F005D5635 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E831E99E1AB91F0F005D5635 /* main.m */; };
 		E831E9A21AB91F0F005D5635 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E831E9A11AB91F0F005D5635 /* AppDelegate.m */; };
 		E831E9A51AB91F10005D5635 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E831E9A41AB91F0F005D5635 /* ViewController.m */; };
@@ -27,6 +33,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CFE57B0E1ABA2BD1008C09C3 /* QuestionsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionsProvider.h; path = Model/QuestionsProvider.h; sourceTree = "<group>"; };
+		CFE57B0F1ABA2BD1008C09C3 /* QuestionsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionsProvider.m; path = Model/QuestionsProvider.m; sourceTree = "<group>"; };
+		CFE57B111ABA2D15008C09C3 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Question.h; path = Model/Question.h; sourceTree = "<group>"; };
+		CFE57B121ABA2D15008C09C3 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Question.m; path = Model/Question.m; sourceTree = "<group>"; };
+		CFE57B141ABA3012008C09C3 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answer.h; path = Model/Answer.h; sourceTree = "<group>"; };
+		CFE57B151ABA3012008C09C3 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Answer.m; path = Model/Answer.m; sourceTree = "<group>"; };
+		CFE57B181ABA3215008C09C3 /* Question0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question0.json; path = Data/Question0.json; sourceTree = "<group>"; };
+		CFE57B1D1ABA3F59008C09C3 /* Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Json.h; path = Model/Json.h; sourceTree = "<group>"; };
+		CFE57B1E1ABA3F59008C09C3 /* Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Json.m; path = Model/Json.m; sourceTree = "<group>"; };
+		CFE57B221ABA440B008C09C3 /* StudentOpinion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentOpinion.h; path = Model/StudentOpinion.h; sourceTree = "<group>"; };
+		CFE57B231ABA440B008C09C3 /* StudentOpinion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentOpinion.m; path = Model/StudentOpinion.m; sourceTree = "<group>"; };
 		E831E9991AB91F0F005D5635 /* BEPiD-03-quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BEPiD-03-quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E831E99D1AB91F0F005D5635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E831E99E1AB91F0F005D5635 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +77,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CFE57B0A1ABA2ABF008C09C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFE57B1D1ABA3F59008C09C3 /* Json.h */,
+				CFE57B1E1ABA3F59008C09C3 /* Json.m */,
+				CFE57B0E1ABA2BD1008C09C3 /* QuestionsProvider.h */,
+				CFE57B0F1ABA2BD1008C09C3 /* QuestionsProvider.m */,
+				CFE57B111ABA2D15008C09C3 /* Question.h */,
+				CFE57B121ABA2D15008C09C3 /* Question.m */,
+				CFE57B141ABA3012008C09C3 /* Answer.h */,
+				CFE57B151ABA3012008C09C3 /* Answer.m */,
+				CFE57B221ABA440B008C09C3 /* StudentOpinion.h */,
+				CFE57B231ABA440B008C09C3 /* StudentOpinion.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CFE57B171ABA31AC008C09C3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CFE57B181ABA3215008C09C3 /* Question0.json */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		E831E9901AB91F0F005D5635 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +123,8 @@
 		E831E99B1AB91F0F005D5635 /* BEPiD-03-quiz */ = {
 			isa = PBXGroup;
 			children = (
+				CFE57B171ABA31AC008C09C3 /* Data */,
+				CFE57B0A1ABA2ABF008C09C3 /* Model */,
 				E831E9A01AB91F0F005D5635 /* AppDelegate.h */,
 				E831E9A11AB91F0F005D5635 /* AppDelegate.m */,
 				E831E9A31AB91F0F005D5635 /* ViewController.h */,
@@ -201,6 +245,7 @@
 			files = (
 				E831E9A81AB91F10005D5635 /* Main.storyboard in Resources */,
 				E831E9AD1AB91F10005D5635 /* LaunchScreen.xib in Resources */,
+				CFE57B191ABA3215008C09C3 /* Question0.json in Resources */,
 				E831E9AA1AB91F10005D5635 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +264,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE57B101ABA2BD1008C09C3 /* QuestionsProvider.m in Sources */,
+				CFE57B161ABA3012008C09C3 /* Answer.m in Sources */,
+				CFE57B1F1ABA3F59008C09C3 /* Json.m in Sources */,
 				E831E9A51AB91F10005D5635 /* ViewController.m in Sources */,
+				CFE57B131ABA2D15008C09C3 /* Question.m in Sources */,
 				E831E9A21AB91F0F005D5635 /* AppDelegate.m in Sources */,
+				CFE57B241ABA440B008C09C3 /* StudentOpinion.m in Sources */,
 				E831E99F1AB91F0F005D5635 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +464,7 @@
 				E831E9BE1AB91F10005D5635 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E831E9BF1AB91F10005D5635 /* Build configuration list for PBXNativeTarget "BEPiD-03-quizTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +473,7 @@
 				E831E9C11AB91F10005D5635 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

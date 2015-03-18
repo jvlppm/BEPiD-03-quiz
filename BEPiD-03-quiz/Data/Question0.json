@@ -1,0 +1,23 @@
+{
+    "texto": "Teste de pergunta",
+    "respostas": [
+        "Resposta 0",
+        "Resposta 1",
+        "Resposta 2",
+        "Resposta 3"
+    ],
+    "resposta_correta": 0,
+    "dificuldade": 0,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 0,
+            "certeza": 0.3
+        },
+        {
+            "curso": "artes",
+            "resposta": 0,
+            "certeza": 0.5
+        }
+    ],
+}
