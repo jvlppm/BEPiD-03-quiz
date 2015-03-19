@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "QuestionsProvider.h"
+#import "Question.h"
 
 @interface ViewController ()
 
@@ -17,6 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
+    QuestionsProvider* questions = [[QuestionsProvider alloc] init];
+    Question* question = [questions getQuestion];
+    NSLog(@"%@", question.text);
 }
 
 - (void)didReceiveMemoryWarning {
