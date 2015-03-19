@@ -12,14 +12,18 @@
 
 // Classe responsável por armazenar e recuperar perguntas para o jogo.
 @implementation QuestionsProvider {
-    NSMutableArray* _questions;
+    NSMutableDictionary* _questions;
+    NSMutableArray* _difficulties;
+    int _difficultyIndex;
 }
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _questions = [[NSMutableArray alloc] init];
+        _difficultyIndex = 0;
+        _difficulties = [[NSMutableArray alloc] init];
+        _questions = [[NSMutableDictionary alloc] init];
 
         for(int i = 0; ; i++) {
             NSString* fileName = [NSString stringWithFormat:@"Question%d", i];
@@ -28,13 +32,45 @@
                 break;
             }
 
-            Question* question = [Question QuestionWithData:data];
+            Question* question = [Question questionWithData:data];
             if (question) {
-                [_questions addObject:question];
+                NSNumber* difNumber = [NSNumber numberWithInt:question.difficulty];
+                NSString* difKey = [NSString stringWithFormat:@"%d", question.difficulty];
+
+                if (![_difficulties containsObject:difNumber])
+                    [_difficulties addObject: difNumber];
+
+                NSMutableArray* questions = [_questions valueForKey:difKey];
+                if (questions) {
+                    [questions addObject:question];
+                }
+                else {
+                    questions = [[NSMutableArray alloc] initWithObjects:question, nil];
+                    [_questions setObject:questions forKey: difKey];
+                }
             }
         }
+
+        NSSortDescriptor *ascSort = [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES];
+        [_difficulties sortUsingDescriptors:[NSArray arrayWithObject:ascSort]];
     }
     return self;
+}
+
+- (Question *)getQuestion {
+    NSNumber* questionDifficulty = _difficulties[_difficultyIndex];
+    NSString* difKey = [NSString stringWithFormat:@"%@", questionDifficulty];
+
+    NSArray* questionsForDifficulty = [_questions valueForKey:difKey];
+    if (!questionsForDifficulty || questionsForDifficulty.count <= 0)
+        return nil;
+
+    int number = arc4random() % questionsForDifficulty.count;
+    return questionsForDifficulty[number];
+}
+
+- (void)increaseDifficulty {
+    _difficultyIndex++;
 }
 
 @end
