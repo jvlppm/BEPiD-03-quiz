@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF3BA1A11ABCD2AC00756873 /* HighScoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3BA1A01ABCD2AC00756873 /* HighScoreManager.m */; };
+		CF3BA1A41ABCD2E800756873 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3BA1A31ABCD2E800756873 /* Score.m */; };
 		CFE57B101ABA2BD1008C09C3 /* QuestionsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B0F1ABA2BD1008C09C3 /* QuestionsProvider.m */; };
 		CFE57B131ABA2D15008C09C3 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B121ABA2D15008C09C3 /* Question.m */; };
 		CFE57B161ABA3012008C09C3 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B151ABA3012008C09C3 /* Answer.m */; };
@@ -33,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF3BA19F1ABCD2AC00756873 /* HighScoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HighScoreManager.h; path = Model/HighScoreManager.h; sourceTree = "<group>"; };
+		CF3BA1A01ABCD2AC00756873 /* HighScoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HighScoreManager.m; path = Model/HighScoreManager.m; sourceTree = "<group>"; };
+		CF3BA1A21ABCD2E800756873 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Score.h; path = Model/Score.h; sourceTree = "<group>"; };
+		CF3BA1A31ABCD2E800756873 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Score.m; path = Model/Score.m; sourceTree = "<group>"; };
 		CFE57B0E1ABA2BD1008C09C3 /* QuestionsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionsProvider.h; path = Model/QuestionsProvider.h; sourceTree = "<group>"; };
 		CFE57B0F1ABA2BD1008C09C3 /* QuestionsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionsProvider.m; path = Model/QuestionsProvider.m; sourceTree = "<group>"; };
 		CFE57B111ABA2D15008C09C3 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Question.h; path = Model/Question.h; sourceTree = "<group>"; };
@@ -90,6 +96,10 @@
 				CFE57B151ABA3012008C09C3 /* Answer.m */,
 				CFE57B221ABA440B008C09C3 /* StudentOpinion.h */,
 				CFE57B231ABA440B008C09C3 /* StudentOpinion.m */,
+				CF3BA19F1ABCD2AC00756873 /* HighScoreManager.h */,
+				CF3BA1A01ABCD2AC00756873 /* HighScoreManager.m */,
+				CF3BA1A21ABCD2E800756873 /* Score.h */,
+				CF3BA1A31ABCD2E800756873 /* Score.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -265,6 +275,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE57B101ABA2BD1008C09C3 /* QuestionsProvider.m in Sources */,
+				CF3BA1A11ABCD2AC00756873 /* HighScoreManager.m in Sources */,
+				CF3BA1A41ABCD2E800756873 /* Score.m in Sources */,
 				CFE57B161ABA3012008C09C3 /* Answer.m in Sources */,
 				CFE57B1F1ABA3F59008C09C3 /* Json.m in Sources */,
 				E831E9A51AB91F10005D5635 /* ViewController.m in Sources */,

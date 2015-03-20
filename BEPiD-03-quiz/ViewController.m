@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "QuestionsProvider.h"
 #import "Question.h"
+#import "HighScoreManager.h"
+#import "Score.h"
 
 @interface ViewController ()
 
@@ -20,9 +22,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
+    /*
+    Score* testScore = [Score scoreFor:@"Joao Vitor" withPoints:100];
+
+    HighScoreManager* hs = [HighScoreManager sharedInstance];
+    int pos = [hs getPositionFor:testScore];
+    NSLog(@"Position: %d", pos);
+
+    [hs saveScore:testScore];
+
     QuestionsProvider* questions = [[QuestionsProvider alloc] init];
     Question* question = [questions getQuestion];
-    NSLog(@"%@", question.text);
+    NSLog(@"Question: %@", question.text);
+    */
 }
 
 - (void)didReceiveMemoryWarning {
