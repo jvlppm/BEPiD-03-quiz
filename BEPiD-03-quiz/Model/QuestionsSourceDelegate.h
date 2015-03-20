@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @class Question;
+@protocol QuestionsSource;
 
-@protocol QuestionsSourceDelegate <NSObject>
+@protocol QuestionsSourceDelegate
 
-- (void) onNewQuestion: (Question*) question;
-- (void) onNoMoreQuestions;
+- (void) onNewQuestion: (Question*) question fromSource: (NSObject<QuestionsSource>*) source;
+- (void) onNoMoreQuestionsFrom: (NSObject<QuestionsSource>*) source;
 
 @end
 

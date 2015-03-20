@@ -10,8 +10,8 @@
 
 @class QuestionsSourceDelegate;
 
-@protocol QuestionsSource<NSObject>
+@protocol QuestionsSource
 
-- (void) startLoadingQuestions: QuestionsSourceDelegate;
+- (void) startLoadingQuestions: (NSObject<QuestionsSourceDelegate>*) delegate;
 
 @end

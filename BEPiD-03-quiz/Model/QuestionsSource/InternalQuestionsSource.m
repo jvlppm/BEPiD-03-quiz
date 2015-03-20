@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 João Vitor. All rights reserved.
 //
 
-#import "InternalQuestionsSource.h"
-#import "Json.h"
 #import "Question.h"
 #import "QuestionsSourceDelegate.h"
+#import "InternalQuestionsSource.h"
+#import "Json.h"
 
 @implementation InternalQuestionsSource {
     BOOL _canRead;
@@ -24,7 +24,7 @@
     return self;
 }
 
-- (void)startLoadingQuestions:(id)QuestionsSourceDelegate {
+- (void)startLoadingQuestions:(NSObject<QuestionsSourceDelegate>*) delegate {
     @synchronized(self) {
         if (!_canRead)
             [NSException raise:@"Source already used" format:@"QuestionsSource cannot be used twice"];
@@ -39,7 +39,7 @@
         }
 
         Question* question = [Question questionWithData: data];
-        [QuestionsSourceDelegate onNewQuestion: question];
+        [delegate onNewQuestion: question fromSource: self];
     }
 }
 

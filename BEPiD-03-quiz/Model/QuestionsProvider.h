@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "QuestionsSourceDelegate.h"
 
 @class Question;
 
-@interface QuestionsProvider : NSObject
+@interface QuestionsProvider : NSObject<QuestionsSourceDelegate>
 
 - (instancetype) init;
 - (Question*) getQuestion;

@@ -10,7 +10,7 @@
 #import "Question.h"
 #import "Json.h"
 
-// Classe responsável por armazenar e recuperar perguntas para o jogo.
+// Classe responsável por conhecer e recuperar perguntas para o jogo.
 @implementation QuestionsProvider {
     NSMutableDictionary* _questions;
     NSMutableArray* _difficulties;
@@ -71,6 +71,14 @@
 
 - (void)increaseDifficulty {
     _difficultyIndex++;
+}
+
+- (void)onNewQuestion:(Question *)question fromSource:(NSObject<QuestionsSource> *)source {
+
+}
+
+- (void)onNoMoreQuestionsFrom:(NSObject<QuestionsSource> *)source {
+
 }
 
 @end

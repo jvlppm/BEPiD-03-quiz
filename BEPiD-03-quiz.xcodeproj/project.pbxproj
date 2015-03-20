@@ -86,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				CF264C051ABB974B00CB8B5C /* QuestionsSource.h */,
+				CF264C081ABB983400CB8B5C /* QuestionsSourceDelegate.h */,
 				CF264C431ABB9E5300CB8B5C /* InternalQuestionsSource.h */,
 				CF264C441ABB9E5300CB8B5C /* InternalQuestionsSource.m */,
 			);
@@ -106,7 +107,6 @@
 				CFE57B151ABA3012008C09C3 /* Answer.m */,
 				CFE57B221ABA440B008C09C3 /* StudentOpinion.h */,
 				CFE57B231ABA440B008C09C3 /* StudentOpinion.m */,
-				CF264C081ABB983400CB8B5C /* QuestionsSourceDelegate.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
