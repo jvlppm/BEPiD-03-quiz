@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF264C451ABB9E5300CB8B5C /* InternalQuestionsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CF264C441ABB9E5300CB8B5C /* InternalQuestionsSource.m */; };
 		CFE57B101ABA2BD1008C09C3 /* QuestionsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B0F1ABA2BD1008C09C3 /* QuestionsProvider.m */; };
 		CFE57B131ABA2D15008C09C3 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B121ABA2D15008C09C3 /* Question.m */; };
 		CFE57B161ABA3012008C09C3 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B151ABA3012008C09C3 /* Answer.m */; };
@@ -33,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF264C051ABB974B00CB8B5C /* QuestionsSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionsSource.h; path = Model/QuestionsSource.h; sourceTree = "<group>"; };
+		CF264C081ABB983400CB8B5C /* QuestionsSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionsSourceDelegate.h; path = Model/QuestionsSourceDelegate.h; sourceTree = "<group>"; };
+		CF264C431ABB9E5300CB8B5C /* InternalQuestionsSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InternalQuestionsSource.h; path = Model/QuestionsSource/InternalQuestionsSource.h; sourceTree = "<group>"; };
+		CF264C441ABB9E5300CB8B5C /* InternalQuestionsSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InternalQuestionsSource.m; path = Model/QuestionsSource/InternalQuestionsSource.m; sourceTree = "<group>"; };
 		CFE57B0E1ABA2BD1008C09C3 /* QuestionsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionsProvider.h; path = Model/QuestionsProvider.h; sourceTree = "<group>"; };
 		CFE57B0F1ABA2BD1008C09C3 /* QuestionsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionsProvider.m; path = Model/QuestionsProvider.m; sourceTree = "<group>"; };
 		CFE57B111ABA2D15008C09C3 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Question.h; path = Model/Question.h; sourceTree = "<group>"; };
@@ -77,9 +82,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF264C471ABB9E7D00CB8B5C /* QuestionsSource */ = {
+			isa = PBXGroup;
+			children = (
+				CF264C051ABB974B00CB8B5C /* QuestionsSource.h */,
+				CF264C431ABB9E5300CB8B5C /* InternalQuestionsSource.h */,
+				CF264C441ABB9E5300CB8B5C /* InternalQuestionsSource.m */,
+			);
+			name = QuestionsSource;
+			sourceTree = "<group>";
+		};
 		CFE57B0A1ABA2ABF008C09C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CF264C471ABB9E7D00CB8B5C /* QuestionsSource */,
 				CFE57B1D1ABA3F59008C09C3 /* Json.h */,
 				CFE57B1E1ABA3F59008C09C3 /* Json.m */,
 				CFE57B0E1ABA2BD1008C09C3 /* QuestionsProvider.h */,
@@ -90,6 +106,7 @@
 				CFE57B151ABA3012008C09C3 /* Answer.m */,
 				CFE57B221ABA440B008C09C3 /* StudentOpinion.h */,
 				CFE57B231ABA440B008C09C3 /* StudentOpinion.m */,
+				CF264C081ABB983400CB8B5C /* QuestionsSourceDelegate.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -123,8 +140,8 @@
 		E831E99B1AB91F0F005D5635 /* BEPiD-03-quiz */ = {
 			isa = PBXGroup;
 			children = (
-				CFE57B171ABA31AC008C09C3 /* Data */,
 				CFE57B0A1ABA2ABF008C09C3 /* Model */,
+				CFE57B171ABA31AC008C09C3 /* Data */,
 				E831E9A01AB91F0F005D5635 /* AppDelegate.h */,
 				E831E9A11AB91F0F005D5635 /* AppDelegate.m */,
 				E831E9A31AB91F0F005D5635 /* ViewController.h */,
@@ -268,6 +285,7 @@
 				CFE57B161ABA3012008C09C3 /* Answer.m in Sources */,
 				CFE57B1F1ABA3F59008C09C3 /* Json.m in Sources */,
 				E831E9A51AB91F10005D5635 /* ViewController.m in Sources */,
+				CF264C451ABB9E5300CB8B5C /* InternalQuestionsSource.m in Sources */,
 				CFE57B131ABA2D15008C09C3 /* Question.m in Sources */,
 				E831E9A21AB91F0F005D5635 /* AppDelegate.m in Sources */,
 				CFE57B241ABA440B008C09C3 /* StudentOpinion.m in Sources */,
