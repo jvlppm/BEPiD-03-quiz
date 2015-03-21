@@ -61,4 +61,12 @@
     return position + 1;
 }
 
+- (unsigned long)count {
+    return _data.count;
+}
+
+- (Score *)scoreAt:(unsigned long)index {
+    return _data[index];
+}
+
 @end

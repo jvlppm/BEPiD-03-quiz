@@ -17,4 +17,7 @@
 - (int) getPositionFor: (Score*) score;
 - (void) saveScore: (Score*) score;
 
+- (Score*) scoreAt: (unsigned long) index;
+- (unsigned long) count;
+
 @end
