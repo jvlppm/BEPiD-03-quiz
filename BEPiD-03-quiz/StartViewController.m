@@ -6,17 +6,18 @@
 //  Copyright (c) 2015 João Vitor. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "StartViewController.h"
 #import "Game.h"
 #import "Question.h"
 #import "HighScoreManager.h"
 #import "Score.h"
+#import "GameViewController.h"
 
-@interface ViewController ()
+@interface StartViewController ()
 
 @end
 
-@implementation ViewController
+@implementation StartViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,6 +41,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"new_game"])
+    {
+        Game* newGame = [[Game alloc] init];
+        
+        UITabBarController *vc = [segue destinationViewController];
+        for (GameViewController* gameController in vc.viewControllers) {
+            gameController.game = newGame;
+        }
+    }
 }
 
 @end
