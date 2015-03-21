@@ -23,6 +23,9 @@
 		E831E9AA1AB91F10005D5635 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E831E9A91AB91F10005D5635 /* Images.xcassets */; };
 		E831E9AD1AB91F10005D5635 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E831E9AB1AB91F10005D5635 /* LaunchScreen.xib */; };
 		E831E9B91AB91F10005D5635 /* BEPiD_03_quizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E831E9B81AB91F10005D5635 /* BEPiD_03_quizTests.m */; };
+		E84D47621ABDEDCC0051B3CD /* 475332-flag-128.png in Resources */ = {isa = PBXBuildFile; fileRef = E84D475F1ABDEDCC0051B3CD /* 475332-flag-128.png */; };
+		E84D47631ABDEDCC0051B3CD /* 475333-announce-128.png in Resources */ = {isa = PBXBuildFile; fileRef = E84D47601ABDEDCC0051B3CD /* 475333-announce-128.png */; };
+		E84D47641ABDEDCC0051B3CD /* modifier-128.png in Resources */ = {isa = PBXBuildFile; fileRef = E84D47611ABDEDCC0051B3CD /* modifier-128.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		E831E9B21AB91F10005D5635 /* BEPiD-03-quizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BEPiD-03-quizTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E831E9B71AB91F10005D5635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E831E9B81AB91F10005D5635 /* BEPiD_03_quizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BEPiD_03_quizTests.m; sourceTree = "<group>"; };
+		E84D475F1ABDEDCC0051B3CD /* 475332-flag-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "475332-flag-128.png"; path = "Images/475332-flag-128.png"; sourceTree = "<group>"; };
+		E84D47601ABDEDCC0051B3CD /* 475333-announce-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "475333-announce-128.png"; path = "Images/475333-announce-128.png"; sourceTree = "<group>"; };
+		E84D47611ABDEDCC0051B3CD /* modifier-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "modifier-128.png"; path = "Images/modifier-128.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,7 @@
 		E831E99B1AB91F0F005D5635 /* BEPiD-03-quiz */ = {
 			isa = PBXGroup;
 			children = (
+				E84D47651ABDEDD10051B3CD /* Images */,
 				CF3BA1A81ABCEC8500756873 /* Extensions */,
 				CFE57B171ABA31AC008C09C3 /* Data */,
 				CFE57B0A1ABA2ABF008C09C3 /* Model */,
@@ -184,6 +191,16 @@
 				E831E9B71AB91F10005D5635 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E84D47651ABDEDD10051B3CD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E84D475F1ABDEDCC0051B3CD /* 475332-flag-128.png */,
+				E84D47601ABDEDCC0051B3CD /* 475333-announce-128.png */,
+				E84D47611ABDEDCC0051B3CD /* modifier-128.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E831E9A81AB91F10005D5635 /* Main.storyboard in Resources */,
+				E84D47621ABDEDCC0051B3CD /* 475332-flag-128.png in Resources */,
 				E831E9AD1AB91F10005D5635 /* LaunchScreen.xib in Resources */,
+				E84D47641ABDEDCC0051B3CD /* modifier-128.png in Resources */,
+				E84D47631ABDEDCC0051B3CD /* 475333-announce-128.png in Resources */,
 				CFE57B191ABA3215008C09C3 /* Question0.json in Resources */,
 				E831E9AA1AB91F10005D5635 /* Images.xcassets in Resources */,
 			);
