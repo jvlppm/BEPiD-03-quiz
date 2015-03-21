@@ -14,6 +14,7 @@
 @implementation Question {
     NSMutableArray* _answers;
     NSMutableDictionary* _collegeStudents;
+    Answer* _correctAnswer;
 }
 
 + (Question *)questionWithData:(NSDictionary *) data {
@@ -76,6 +77,10 @@
         }
     }
     return nil;
+}
+
+-(BOOL)correctAnswer:(Answer *)answer {
+    return answer == _correctAnswer;
 }
 
 @end

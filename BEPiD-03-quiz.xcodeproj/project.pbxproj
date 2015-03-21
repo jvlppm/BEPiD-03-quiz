@@ -10,7 +10,7 @@
 		CF3BA1A11ABCD2AC00756873 /* HighScoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3BA1A01ABCD2AC00756873 /* HighScoreManager.m */; };
 		CF3BA1A41ABCD2E800756873 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3BA1A31ABCD2E800756873 /* Score.m */; };
 		CF3BA1A71ABCEC8000756873 /* NSMutableArray_Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3BA1A61ABCEC8000756873 /* NSMutableArray_Shuffling.m */; };
-		CFE57B101ABA2BD1008C09C3 /* QuestionsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B0F1ABA2BD1008C09C3 /* QuestionsProvider.m */; };
+		CFE57B101ABA2BD1008C09C3 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B0F1ABA2BD1008C09C3 /* Game.m */; };
 		CFE57B131ABA2D15008C09C3 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B121ABA2D15008C09C3 /* Question.m */; };
 		CFE57B161ABA3012008C09C3 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B151ABA3012008C09C3 /* Answer.m */; };
 		CFE57B191ABA3215008C09C3 /* Question0.json in Resources */ = {isa = PBXBuildFile; fileRef = CFE57B181ABA3215008C09C3 /* Question0.json */; };
@@ -26,6 +26,7 @@
 		E84D47621ABDEDCC0051B3CD /* 475332-flag-128.png in Resources */ = {isa = PBXBuildFile; fileRef = E84D475F1ABDEDCC0051B3CD /* 475332-flag-128.png */; };
 		E84D47631ABDEDCC0051B3CD /* 475333-announce-128.png in Resources */ = {isa = PBXBuildFile; fileRef = E84D47601ABDEDCC0051B3CD /* 475333-announce-128.png */; };
 		E84D47641ABDEDCC0051B3CD /* modifier-128.png in Resources */ = {isa = PBXBuildFile; fileRef = E84D47611ABDEDCC0051B3CD /* modifier-128.png */; };
+		E8FD43591ABE1B0700798D03 /* QuestionState.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD43581ABE1B0700798D03 /* QuestionState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +46,8 @@
 		CF3BA1A31ABCD2E800756873 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Score.m; path = Model/Score.m; sourceTree = "<group>"; };
 		CF3BA1A51ABCEC8000756873 /* NSMutableArray_Shuffling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSMutableArray_Shuffling.h; path = Extensions/NSMutableArray_Shuffling.h; sourceTree = "<group>"; };
 		CF3BA1A61ABCEC8000756873 /* NSMutableArray_Shuffling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSMutableArray_Shuffling.m; path = Extensions/NSMutableArray_Shuffling.m; sourceTree = "<group>"; };
-		CFE57B0E1ABA2BD1008C09C3 /* QuestionsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionsProvider.h; path = Model/QuestionsProvider.h; sourceTree = "<group>"; };
-		CFE57B0F1ABA2BD1008C09C3 /* QuestionsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionsProvider.m; path = Model/QuestionsProvider.m; sourceTree = "<group>"; };
+		CFE57B0E1ABA2BD1008C09C3 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = Model/Game.h; sourceTree = "<group>"; };
+		CFE57B0F1ABA2BD1008C09C3 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Game.m; path = Model/Game.m; sourceTree = "<group>"; };
 		CFE57B111ABA2D15008C09C3 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Question.h; path = Model/Question.h; sourceTree = "<group>"; };
 		CFE57B121ABA2D15008C09C3 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Question.m; path = Model/Question.m; sourceTree = "<group>"; };
 		CFE57B141ABA3012008C09C3 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answer.h; path = Model/Answer.h; sourceTree = "<group>"; };
@@ -72,6 +73,8 @@
 		E84D475F1ABDEDCC0051B3CD /* 475332-flag-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "475332-flag-128.png"; path = "Images/475332-flag-128.png"; sourceTree = "<group>"; };
 		E84D47601ABDEDCC0051B3CD /* 475333-announce-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "475333-announce-128.png"; path = "Images/475333-announce-128.png"; sourceTree = "<group>"; };
 		E84D47611ABDEDCC0051B3CD /* modifier-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "modifier-128.png"; path = "Images/modifier-128.png"; sourceTree = "<group>"; };
+		E8FD43571ABE1B0700798D03 /* QuestionState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionState.h; path = Model/QuestionState.h; sourceTree = "<group>"; };
+		E8FD43581ABE1B0700798D03 /* QuestionState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionState.m; path = Model/QuestionState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +109,8 @@
 			children = (
 				CFE57B1D1ABA3F59008C09C3 /* Json.h */,
 				CFE57B1E1ABA3F59008C09C3 /* Json.m */,
-				CFE57B0E1ABA2BD1008C09C3 /* QuestionsProvider.h */,
-				CFE57B0F1ABA2BD1008C09C3 /* QuestionsProvider.m */,
+				CFE57B0E1ABA2BD1008C09C3 /* Game.h */,
+				CFE57B0F1ABA2BD1008C09C3 /* Game.m */,
 				CFE57B111ABA2D15008C09C3 /* Question.h */,
 				CFE57B121ABA2D15008C09C3 /* Question.m */,
 				CFE57B141ABA3012008C09C3 /* Answer.h */,
@@ -118,6 +121,8 @@
 				CF3BA1A01ABCD2AC00756873 /* HighScoreManager.m */,
 				CF3BA1A21ABCD2E800756873 /* Score.h */,
 				CF3BA1A31ABCD2E800756873 /* Score.m */,
+				E8FD43571ABE1B0700798D03 /* QuestionState.h */,
+				E8FD43581ABE1B0700798D03 /* QuestionState.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -307,13 +312,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFE57B101ABA2BD1008C09C3 /* QuestionsProvider.m in Sources */,
+				CFE57B101ABA2BD1008C09C3 /* Game.m in Sources */,
 				CF3BA1A11ABCD2AC00756873 /* HighScoreManager.m in Sources */,
 				CF3BA1A41ABCD2E800756873 /* Score.m in Sources */,
 				CFE57B161ABA3012008C09C3 /* Answer.m in Sources */,
 				CFE57B1F1ABA3F59008C09C3 /* Json.m in Sources */,
 				E831E9A51AB91F10005D5635 /* ViewController.m in Sources */,
 				CFE57B131ABA2D15008C09C3 /* Question.m in Sources */,
+				E8FD43591ABE1B0700798D03 /* QuestionState.m in Sources */,
 				E831E9A21AB91F0F005D5635 /* AppDelegate.m in Sources */,
 				CF3BA1A71ABCEC8000756873 /* NSMutableArray_Shuffling.m in Sources */,
 				CFE57B241ABA440B008C09C3 /* StudentOpinion.m in Sources */,

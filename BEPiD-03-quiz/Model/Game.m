@@ -6,33 +6,59 @@
 //  Copyright (c) 2015 João Vitor. All rights reserved.
 //
 
-#import "QuestionsProvider.h"
+#import "Game.h"
 #import "Question.h"
+#import "Answer.h"
 #import "Json.h"
+#import "QuestionState.h"
 #import "NSMutableArray_Shuffling.h"
 
-// Classe responsável por armazenar e recuperar perguntas para o jogo.
-@implementation QuestionsProvider {
+@implementation Game {
     NSMutableDictionary* _questions;
     NSMutableArray* _difficulties;
-    int _difficultyIndex;
+    NSMutableArray* _selectedQuestions;
     int _questionIndex;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
-        _difficultyIndex = 0;
         _difficulties = [[NSMutableArray alloc] init];
         _questions = [[NSMutableDictionary alloc] init];
+        _selectedQuestions = [[NSMutableArray alloc] init];
 
         [self loadQuestions];
         [self randomizeQuestions];
         [self sortByDifficulty];
+        [self selectQuestions];
     }
     return self;
 }
+
+#pragma mark Game Methods
+
+- (Question *)currentQuestion {
+    if (_questionIndex >= _selectedQuestions.count)
+        return nil;
+    
+    return _selectedQuestions[_questionIndex];
+}
+
+- (AnswerResponse)answer:(Answer *)userAnswer {
+    if ([userAnswer.question correctAnswer: userAnswer]) {
+        _questionIndex++;
+        if ([self currentQuestion] == nil)
+            return Won;
+        return NextQuestion;
+    }
+    return Lost;
+}
+
+- (NSArray*) state {
+    return _selectedQuestions;
+}
+
+#pragma mark Helper Methods
 
 - (void) loadQuestions {
     for(int i = 0; ; i++) {
@@ -80,22 +106,25 @@
     [_difficulties sortUsingDescriptors:[NSArray arrayWithObject:ascSort]];
 }
 
-- (Question *)getQuestion {
-    NSNumber* questionDifficulty = _difficulties[_difficultyIndex];
-    NSString* difKey = [NSString stringWithFormat:@"%@", questionDifficulty];
+- (void) selectQuestions {
+    int difficulty = 0;
+    do {
+        NSNumber* questionDifficulty = _difficulties[difficulty];
+        if (!questionDifficulty)
+            break;
+        NSString* difKey = [NSString stringWithFormat:@"%@", questionDifficulty];
+        NSArray* questionsForCurrentDifficulty = [_questions valueForKey:difKey];
+        
+        if (!questionsForCurrentDifficulty)
+            break;
+        
+        for (int i = 0; i < 5 && i < questionsForCurrentDifficulty.count; i++) {
+            Question* question = questionsForCurrentDifficulty[i];
+            QuestionState* gameQuestion = [[QuestionState alloc] initWithQuestion:question];
 
-    NSArray* questionsForCurrentDifficulty = [_questions valueForKey:difKey];
-    if (!questionsForCurrentDifficulty || questionsForCurrentDifficulty.count <= 0)
-        return nil;
-
-    Question* question = questionsForCurrentDifficulty[_questionIndex];
-    _questionIndex = (_questionIndex + 1) % questionsForCurrentDifficulty.count;
-    return question;
-}
-
-- (void)increaseDifficulty {
-    _difficultyIndex++;
-    _questionIndex = 0;
+            [_selectedQuestions addObject:gameQuestion];
+        }
+    } while(true);
 }
 
 @end

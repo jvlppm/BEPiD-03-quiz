@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "QuestionsProvider.h"
+#import "Game.h"
 #import "Question.h"
 #import "HighScoreManager.h"
 #import "Score.h"

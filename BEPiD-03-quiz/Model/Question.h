@@ -14,7 +14,6 @@
 @interface Question : NSObject
 
 @property NSString* text;
-@property Answer* correctAnswer;
 @property int difficulty;
 
 + (Question*) questionWithData: (NSDictionary*) data;
@@ -23,6 +22,8 @@
 - (unsigned long) countAnswers;
 - (Answer*) getAnswer: (unsigned long) answer;
 - (void) randomizeAnswers;
+
+- (BOOL) correctAnswer: (Answer*) answer;
 
 - (StudentOpinion*) askCollegeStudent: (NSString*) curso;
 
