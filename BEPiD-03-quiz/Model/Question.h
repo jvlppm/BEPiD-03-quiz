@@ -19,11 +19,10 @@
 
 + (Question*) questionWithData: (NSDictionary*) data;
 - (instancetype) initWithData: (NSDictionary*) data;
-- (instancetype) initWithText: (NSString*) text;
 
-- (void) addAnswer: (Answer*) answer;
-- (unsigned int) countAnswers;
-- (Answer*) getAnswer: (unsigned int) answer;
+- (unsigned long) countAnswers;
+- (Answer*) getAnswer: (unsigned long) answer;
+- (void) randomizeAnswers;
 
 - (StudentOpinion*) askCollegeStudent: (NSString*) curso;
 

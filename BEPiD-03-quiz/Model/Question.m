@@ -9,6 +9,7 @@
 #import "Question.h"
 #import "Answer.h"
 #import "StudentOpinion.h"
+#import "NSMutableArray_Shuffling.h"
 
 @implementation Question {
     NSMutableArray* _answers;
@@ -56,8 +57,16 @@
     [_answers addObject:answer];
 }
 
-- (Answer*) getAnswer: (unsigned int) number {
+- (Answer*) getAnswer: (unsigned long) number {
     return _answers[number];
+}
+
+- (unsigned long)countAnswers {
+    return _answers.count;
+}
+
+- (void) randomizeAnswers {
+    [_answers shuffle];
 }
 
 - (StudentOpinion *)askCollegeStudent:(NSString *)course {
