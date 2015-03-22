@@ -10,6 +10,16 @@
 
 @implementation Score
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _points = 0;
+        _name = @"Anônimo";
+    }
+    return self;
+}
+
 + (Score *)scoreFor:(NSString *)name withPoints:(int)points {
     return [[Score alloc] initWithName:name andPoints: points];
 }

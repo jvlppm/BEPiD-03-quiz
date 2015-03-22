@@ -12,6 +12,7 @@
 #import "Json.h"
 #import "QuestionState.h"
 #import "NSMutableArray_Shuffling.h"
+#import "Score.h"
 
 @implementation Game {
     NSMutableDictionary* _questions;
@@ -31,6 +32,7 @@
         _selectedQuestions = [[NSMutableArray alloc] init];
         _questionIndex = -1;
         _accumulatedPrize = 0;
+        _score = [[Score alloc] init];
 
         [self loadQuestions];
         [self randomizeQuestions];
@@ -57,16 +59,19 @@
 - (void) answer:(Answer *)userAnswer {
     QuestionState* current = self.currentQuestion;
     if ([userAnswer.question correctAnswer: userAnswer]) {
+        int points = current.prize;
         if (!_usingHelp)
             current.status = CorrectAnswer;
         else
             current.status = CorrectWithHelp;
         current.answer = userAnswer;
-        _accumulatedPrize += current.prize;
+        _accumulatedPrize += points;
+        _score.points += points;
         [self advanceQuestion];
     }
     else {
         current.status = WrongAnswer;
+        _score.points /= 3;
         _status = Lost;
     }
     
@@ -113,6 +118,7 @@
     
     QuestionState* current = self.currentQuestion;
     [current.question eliminateWrongAnswers: quantity];
+    current.prize /= 2;
 }
 
 #pragma mark - Helper Methods

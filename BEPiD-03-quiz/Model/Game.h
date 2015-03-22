@@ -11,6 +11,7 @@
 @class Question;
 @class QuestionState;
 @class Answer;
+@class Score;
 
 typedef enum : NSUInteger {
     InGame,
@@ -31,6 +32,7 @@ typedef enum : NSUInteger {
 @property (readonly, getter=getState) NSArray* state;
 @property (readonly) int accumulatedPrize;
 @property (readonly) GameStatus status;
+@property (readonly) Score* score;
 
 - (instancetype) init;
 - (void) answer: (Answer*) answer;

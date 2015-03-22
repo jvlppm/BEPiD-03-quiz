@@ -9,6 +9,7 @@
 #import "GameQuestionViewController.h"
 #import "QuestionState.h"
 #import "Answer.h"
+#import "GameOverViewController.h"
 
 @interface GameQuestionViewController () {
     QuestionState* qs;
@@ -63,7 +64,16 @@
         qs = self.game.currentQuestion;
         NSLog(@"Game status: %lu", self.game.status);
         [self reload];
+        if (self.game.status != InGame) {
+            [self endGame];
+        }
     }
+}
+
+- (void) endGame {
+    GameOverViewController* itemViewController = (GameOverViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"game_over"];
+    itemViewController.game = self.game;
+    [self showViewController:itemViewController sender:self];
 }
 
 #pragma mark - TableView
