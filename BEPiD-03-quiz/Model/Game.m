@@ -26,18 +26,21 @@
         _difficulties = [[NSMutableArray alloc] init];
         _questions = [[NSMutableDictionary alloc] init];
         _selectedQuestions = [[NSMutableArray alloc] init];
+        _questionIndex = -1;
+        _accumulatedPrize = 0;
 
         [self loadQuestions];
         [self randomizeQuestions];
         [self sortByDifficulty];
         [self selectQuestions];
+        [self advanceQuestion];
     }
     return self;
 }
 
-#pragma mark Game Methods
+#pragma mark - Game Methods
 
-- (Question *)currentQuestion {
+- (QuestionState*) getCurrentQuestion {
     if (_questionIndex >= _selectedQuestions.count)
         return nil;
     
@@ -45,20 +48,30 @@
 }
 
 - (AnswerResponse)answer:(Answer *)userAnswer {
+    QuestionState* current = _selectedQuestions[_questionIndex];
     if ([userAnswer.question correctAnswer: userAnswer]) {
-        _questionIndex++;
-        if ([self currentQuestion] == nil)
+        current.status = CorrectAnswer;
+        _accumulatedPrize += current.prize;
+        [self advanceQuestion];
+        if (self.currentQuestion == nil)
             return Won;
         return NextQuestion;
     }
     return Lost;
 }
 
-- (NSArray*) state {
+- (NSArray*) getState {
     return _selectedQuestions;
 }
 
-#pragma mark Helper Methods
+#pragma mark - Helper Methods
+
+- (void) advanceQuestion {
+    _questionIndex++;
+    if (_questionIndex < _selectedQuestions.count) {
+        ((QuestionState*)_selectedQuestions[_questionIndex]).status = WaitingAnswer;
+    }
+}
 
 - (void) loadQuestions {
     for(int i = 0; ; i++) {
@@ -107,11 +120,9 @@
 }
 
 - (void) selectQuestions {
-    int difficulty = 0;
-    do {
+    int prize = 100;
+    for(int difficulty = 0; difficulty < _difficulties.count; difficulty++) {
         NSNumber* questionDifficulty = _difficulties[difficulty];
-        if (!questionDifficulty)
-            break;
         NSString* difKey = [NSString stringWithFormat:@"%@", questionDifficulty];
         NSArray* questionsForCurrentDifficulty = [_questions valueForKey:difKey];
         
@@ -121,10 +132,13 @@
         for (int i = 0; i < 5 && i < questionsForCurrentDifficulty.count; i++) {
             Question* question = questionsForCurrentDifficulty[i];
             QuestionState* gameQuestion = [[QuestionState alloc] initWithQuestion:question];
+            gameQuestion.prize = prize;
 
             [_selectedQuestions addObject:gameQuestion];
         }
-    } while(true);
+        
+        prize *= 10;
+    }
 }
 
 @end

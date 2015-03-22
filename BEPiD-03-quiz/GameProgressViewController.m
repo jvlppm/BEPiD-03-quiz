@@ -9,6 +9,7 @@
 #import "GameProgressViewController.h"
 
 @interface GameProgressViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *lblAccumulatedPrize;
 
 @end
 
@@ -22,6 +23,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.lblAccumulatedPrize.text = [NSString stringWithFormat:@"R$ %d,00", self.game.accumulatedPrize];
 }
 
 /*

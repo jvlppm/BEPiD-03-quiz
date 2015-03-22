@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class Question;
+@class QuestionState;
 @class Answer;
 
 typedef enum : NSUInteger {
@@ -19,9 +20,11 @@ typedef enum : NSUInteger {
 
 @interface Game : NSObject
 
+@property (readonly, getter=getCurrentQuestion) QuestionState* currentQuestion;
+@property (readonly, getter=getState) NSArray* state;
+@property (readonly) int accumulatedPrize;
+
 - (instancetype) init;
-- (Question*) currentQuestion;
-- (NSArray*) state;
 - (AnswerResponse) answer: (Answer*) answer;
 
 @end

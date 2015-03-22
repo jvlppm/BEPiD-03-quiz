@@ -16,6 +16,7 @@
     if (self) {
         _question = question;
         _status = Waiting;
+        _prize = 0;
     }
     return self;
 }

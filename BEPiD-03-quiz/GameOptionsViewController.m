@@ -7,8 +7,10 @@
 //
 
 #import "GameOptionsViewController.h"
+#import "QuestionState.h"
 
 @interface GameOptionsViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *lblQuestion;
 
 @end
 
@@ -22,6 +24,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.lblQuestion.text = self.game.currentQuestion.question.text;
 }
 
 /*

@@ -7,8 +7,11 @@
 //
 
 #import "GameQuestionViewController.h"
+#import "QuestionState.h"
 
 @interface GameQuestionViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *lblQuestion;
+@property (weak, nonatomic) IBOutlet UILabel *lblPrize;
 
 @end
 
@@ -22,6 +25,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    QuestionState* qs = self.game.currentQuestion;
+    
+    self.lblQuestion.text = qs.question.text;
+    self.lblPrize.text = [NSString stringWithFormat:@"R$ %d,00", qs.prize];
 }
 
 /*
