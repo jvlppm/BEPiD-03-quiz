@@ -70,12 +70,6 @@
     }
 }
 
-- (void) endGame {
-    GameOverViewController* itemViewController = (GameOverViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"game_over"];
-    itemViewController.game = self.game;
-    [self showViewController:itemViewController sender:self];
-}
-
 #pragma mark - TableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

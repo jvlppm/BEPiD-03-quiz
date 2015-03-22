@@ -1,0 +1,33 @@
+{
+    "texto": "Que compositora brasileira fez sucesso com a sua marchina 'Abre alas'?",
+    "respostas": [
+        "Chiquita Bacana",
+        "Chiquinha Gonzaga",
+        "Chica da Silva",
+        "Chiquititas"
+    ],
+    "resposta_correta": 1,
+    "dificuldade": 2,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 1,
+            "certeza": 0.33
+        },
+        {
+            "curso": "artes",
+            "resposta": 1,
+            "certeza": 0.99
+        },
+		{
+            "curso": "medicina",
+            "resposta":1,
+            "certeza": 0.66
+        },
+		{
+            "curso": "geografia",
+            "resposta":1,
+            "certeza": 0.33
+        }
+    ],
+}

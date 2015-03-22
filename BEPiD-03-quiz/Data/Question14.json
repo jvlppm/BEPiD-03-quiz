@@ -1,33 +1,33 @@
 {
-    "texto": "O que é Ornitorrinco?",
+    "texto": "Quantos eram os anões de Branca de Neve?",
     "respostas": [
-        "Vulcão",
-        "Rio",
-        "Legume",
-        "Animal"
+        "Dez",
+        "Cinco",
+        "Sete",
+        "Doze"
     ],
-    "resposta_correta": 3,
+    "resposta_correta": 2,
     "dificuldade": 0,
     "universitários": [
         {
             "curso": "matematica",
-            "resposta": 3,
+            "resposta": 2,
             "certeza": 0.8
         },
         {
             "curso": "artes",
-            "resposta": 3,
+            "resposta": 2,
             "certeza": 0.9
         },
 		{
             "curso": "medicina",
-            "resposta":3,
-            "certeza": 0.95
+            "resposta":2,
+            "certeza": 0.9
         },
 		{
             "curso": "geografia",
-            "resposta":3,
-            "certeza": 0.99
+            "resposta":2,
+            "certeza": 0.4
         }
     ],
 }

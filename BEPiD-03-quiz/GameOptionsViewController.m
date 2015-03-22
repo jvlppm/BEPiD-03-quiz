@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnSkipQuestion;
 @property (weak, nonatomic) IBOutlet UILabel *lblSkipQuestionDescription;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnAskStudents;
+@property (weak, nonatomic) IBOutlet UILabel *lblAskStudentsDescription;
+
 @property (weak, nonatomic) IBOutlet UIButton *btnLeaveGame;
 @property (weak, nonatomic) IBOutlet UILabel *lblLeaveGameDescription;
 
@@ -46,6 +49,21 @@
     [self updateSkipOption];
     [self updateRemove2WrongAnswersOptions];
     [self updateLeaveOption];
+}
+
+- (IBAction)finishGame:(id)sender {
+    [self endGame];
+}
+
+- (void) updateHelpFromStudentsOption {
+    self.btnAskStudents.enabled = [self.game canAskStudents];
+    if (self.btnAskStudents.enabled)
+        self.lblAskStudentsDescription.text = _optionAvailableOnce;
+    else
+        self.lblAskStudentsDescription.text = _optionAlreadyUsed;
+}
+
+- (IBAction)helpFromStudents:(id)sender {
 }
 
 - (void) updateSkipOption {
@@ -94,15 +112,5 @@
     self.btnLeaveGame.hidden =
     self.lblLeaveGameDescription.hidden = ![self.game canLeave];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

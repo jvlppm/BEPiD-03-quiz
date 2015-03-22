@@ -1,0 +1,33 @@
+{
+    "texto": "Qual fruta é ressecada para se tornar uma ameixa seca?",
+    "respostas": [
+        "Ameixa",
+        "Uva",
+        "Pêssego",
+        "Melão"
+    ],
+    "resposta_correta": 0,
+    "dificuldade": 0,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 0,
+            "certeza": 0.95
+        },
+        {
+            "curso": "artes",
+            "resposta": 0,
+            "certeza": 0.85
+        },
+		{
+            "curso": "medicina",
+            "resposta":0,
+            "certeza": 0.95
+        },
+		{
+            "curso": "geografia",
+            "resposta":2,
+            "certeza": 0.55
+        }
+    ],
+}

@@ -1,0 +1,33 @@
+{
+    "texto": "Na fronteira de quais países está o Everest, pico mais alto do mundo?",
+    "respostas": [
+        "Suíça e Itália",
+        "Nepal e China",
+        "Chile e Argentina",
+        "Brasil e Uruguai"
+    ],
+    "resposta_correta": 1,
+    "dificuldade": 1,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 1,
+            "certeza": 0.7
+        },
+        {
+            "curso": "artes",
+            "resposta": 1,
+            "certeza": 0.8
+        },
+		{
+            "curso": "medicina",
+            "resposta":1,
+            "certeza": 0.8
+        },
+		{
+            "curso": "geografia",
+            "resposta":1,
+            "certeza": 0.99
+        }
+    ],
+}

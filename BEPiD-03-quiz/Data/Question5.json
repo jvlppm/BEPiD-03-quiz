@@ -1,0 +1,33 @@
+{
+    "texto": "Qual o continente que tem mais países?",
+    "respostas": [
+        "Europa",
+        "Africa",
+        "Ásia",
+        "America"
+    ],
+    "resposta_correta": 1,
+    "dificuldade": 3,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 2,
+            "certeza": 0.5
+        },
+        {
+            "curso": "artes",
+            "resposta": 1,
+            "certeza": 0.35
+        },
+		{
+            "curso": "medicina",
+            "resposta":3,
+            "certeza": 0.55
+        },
+		{
+            "curso": "geografia",
+            "resposta":1,
+            "certeza": 0.9
+        }
+    ],
+}

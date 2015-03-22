@@ -1,0 +1,33 @@
+{
+    "texto": "Violoncelo é um instrumento de:",
+    "respostas": [
+        "Sopro",
+        "Cordas",
+        "Percussão",
+        "Repercussão"
+    ],
+    "resposta_correta": 1,
+    "dificuldade": 0,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 1,
+            "certeza": 0.9
+        },
+        {
+            "curso": "artes",
+            "resposta": 1,
+            "certeza": 0.99
+        },
+		{
+            "curso": "medicina",
+            "resposta":1,
+            "certeza": 0.8
+        },
+		{
+            "curso": "geografia",
+            "resposta":1,
+            "certeza": 0.8
+        }
+    ],
+}

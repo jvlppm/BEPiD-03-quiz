@@ -1,0 +1,33 @@
+{
+    "texto": "Quem é o parceiro de aventuras de Dom Quixote?",
+    "respostas": [
+        "Sancho Pança",
+        "Guilherme Tell",
+        "Sigmund Freud",
+        "Lancelot"
+    ],
+    "resposta_correta": 0,
+    "dificuldade": 0,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 0,
+            "certeza": 0.9
+        },
+        {
+            "curso": "artes",
+            "resposta": 0,
+            "certeza": 0.99
+        },
+		{
+            "curso": "medicina",
+            "resposta":0,
+            "certeza": 0.9
+        },
+		{
+            "curso": "geografia",
+            "resposta":0,
+            "certeza": 0.9
+        }
+    ],
+}

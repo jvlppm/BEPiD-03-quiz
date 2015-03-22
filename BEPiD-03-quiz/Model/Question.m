@@ -73,6 +73,7 @@
 - (StudentOpinion *)askCollegeStudent:(NSString *)course {
     for (StudentOpinion* opinion in _collegeStudents) {
         if ([opinion.course isEqualToString: course]) {
+            opinion.answer.studentOpinion = opinion;
             return opinion;
         }
     }
@@ -96,6 +97,14 @@
         Answer* toEliminate = couldEliminate[i];
         toEliminate.eliminated = i < quantity;
     }
+}
+
+- (NSArray *)getStudents {
+    NSMutableArray* students = [[NSMutableArray alloc] init];
+    for (StudentOpinion* op in _collegeStudents) {
+        [students addObject:op.course];
+    }
+    return students;
 }
 
 @end

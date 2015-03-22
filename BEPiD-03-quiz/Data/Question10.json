@@ -1,33 +1,33 @@
 {
-    "texto": "O que é Ornitorrinco?",
+    "texto": "Qual é a capital do Azerbaijão?",
     "respostas": [
-        "Vulcão",
-        "Rio",
-        "Legume",
-        "Animal"
+        "Tibilissi",
+        "Yerevan",
+        "Moscou",
+        "Baku"
     ],
     "resposta_correta": 3,
-    "dificuldade": 0,
+    "dificuldade": 4,
     "universitários": [
         {
             "curso": "matematica",
-            "resposta": 3,
-            "certeza": 0.8
+            "resposta": 1,
+            "certeza": 0.2
         },
         {
             "curso": "artes",
-            "resposta": 3,
-            "certeza": 0.9
+            "resposta": 0,
+            "certeza": 0.2
         },
 		{
             "curso": "medicina",
             "resposta":3,
-            "certeza": 0.95
+            "certeza": 0.3
         },
 		{
             "curso": "geografia",
             "resposta":3,
-            "certeza": 0.99
+            "certeza": 0.7
         }
     ],
 }

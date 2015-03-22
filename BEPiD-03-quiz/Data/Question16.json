@@ -1,0 +1,33 @@
+{
+    "texto": "Quem é o autor do manifesto comunista?",
+    "respostas": [
+        "Lenin",
+        "Gorbatchov",
+        "Karl Marx",
+        "Allan Kardek"
+    ],
+    "resposta_correta": 2,
+    "dificuldade": 1,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 2,
+            "certeza": 0.39
+        },
+        {
+            "curso": "artes",
+            "resposta": 2,
+            "certeza": 0.95
+        },
+		{
+            "curso": "medicina",
+            "resposta":0,
+            "certeza": 0.60
+        },
+		{
+            "curso": "geografia",
+            "resposta":2,
+            "certeza": 0.99
+        }
+    ],
+}

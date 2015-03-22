@@ -43,6 +43,10 @@ typedef enum : NSUInteger {
 - (BOOL) canEliminateAnswers;
 - (void) eliminateAnswers: (int) quantity;
 
+- (BOOL) canAskStudent;
+- (NSArray*) availableStudents;
+- (void) askStudent: (NSString*) course;
+
 - (BOOL) canLeave;
 
 @end

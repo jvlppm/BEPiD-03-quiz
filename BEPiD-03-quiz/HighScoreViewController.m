@@ -62,7 +62,7 @@
     
     switch (item.result) {
         case ResultGaveUp:
-            cell.textLabel.textColor = [UIColor yellowColor];
+            cell.textLabel.textColor = [UIColor orangeColor];
             break;
         case ResultLost:
             cell.textLabel.textColor = [UIColor redColor];

@@ -1,0 +1,33 @@
+{
+    "texto": "Que país possui 50 de seus 150 vulcões em atividade?",
+    "respostas": [
+        "Brasil",
+        "Estados Unidos",
+        "Itália",
+        "Japão"
+    ],
+    "resposta_correta": 1,
+    "dificuldade": 2,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 2,
+            "certeza": 0.2
+        },
+        {
+            "curso": "artes",
+            "resposta": 0,
+            "certeza": 0.3
+        },
+		{
+            "curso": "medicina",
+            "resposta":2,
+            "certeza": 0.5
+        },
+		{
+            "curso": "geografia",
+            "resposta":3,
+            "certeza": 0.8
+        }
+    ],
+}

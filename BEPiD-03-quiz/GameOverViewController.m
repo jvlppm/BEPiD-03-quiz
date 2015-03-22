@@ -41,8 +41,6 @@
     
     originalFrame = self.view.frame;
     
-    //NSArray* topPlayers = [HighScoreManager getTopPlayers];
-    
     NSMutableArray* playerNames = [[NSMutableArray alloc] init];
     
     for (NSString* name in [hs playerNames]) {
@@ -94,14 +92,18 @@
     
     self.lblFinalScoreValue.text = [NSString stringWithFormat:@"R$ %d,00", self.game.score.points];
     
-    if (self.game.status != Won) {
+    if (self.game.status == Lost) {
         self.lblMessage.text = @"Que pena, você errou!";
         self.lblMessage.textColor = [UIColor redColor];
+    }
+    else if (self.game.status != Won) {
+        self.lblMessage.text = @"Você estava indo bem!";
+        self.lblMessage.textColor = [UIColor orangeColor];
     }
     self.lblWrongAnswerValue.hidden =
     self.lblWrongAnswerMessage.hidden =
     self.game.score.points <= 0 ||
-    self.game.status == Won;
+    self.game.status != Lost;
 }
 
 

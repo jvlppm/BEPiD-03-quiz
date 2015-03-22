@@ -1,0 +1,33 @@
+{
+    "texto": "Como é chamada a doença que clareou a pele de Michael Jackson?",
+    "respostas": [
+        "Astigmatismo",
+        "Pedofilia",
+        "Vitiligo",
+        "Bruxismo"
+    ],
+    "resposta_correta": 2,
+    "dificuldade": 0,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 2,
+            "certeza": 0.9
+        },
+        {
+            "curso": "artes",
+            "resposta": 2,
+            "certeza": 0.9
+        },
+		{
+            "curso": "medicina",
+            "resposta":2,
+            "certeza": 0.99
+        },
+		{
+            "curso": "geografia",
+            "resposta":2,
+            "certeza": 0.8
+        }
+    ],
+}

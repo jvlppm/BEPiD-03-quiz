@@ -1,0 +1,33 @@
+{
+    "texto": "Forma, Baguete e Francês são:",
+    "respostas": [
+        "Tipos de Pão",
+        "Provas Olímpicas",
+        "Línguas Românticas",
+        "Queijos"
+    ],
+    "resposta_correta": 0,
+    "dificuldade": 0,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 0,
+            "certeza": 0.9
+        },
+        {
+            "curso": "artes",
+            "resposta": 0,
+            "certeza": 0.9
+        },
+		{
+            "curso": "medicina",
+            "resposta":0,
+            "certeza": 0.9
+        },
+		{
+            "curso": "geografia",
+            "resposta":0,
+            "certeza": 0.9
+        }
+    ],
+}

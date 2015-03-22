@@ -27,6 +27,8 @@
 
 - (void) eliminateWrongAnswers: (int) quantity;
 
-- (StudentOpinion*) askCollegeStudent: (NSString*) curso;
+- (StudentOpinion*) askCollegeStudent: (NSString*) course;
+
+- (NSArray*) getStudents;
 
 @end

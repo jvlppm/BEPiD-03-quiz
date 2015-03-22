@@ -1,0 +1,33 @@
+{
+    "texto": "O que tem em comum rosa, lilás e azul?",
+    "respostas": [
+        "São Vinhos",
+        "São Flores",
+        "São Cores",
+        "São Ilhas"
+    ],
+    "resposta_correta": 2,
+    "dificuldade": 0,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 2,
+            "certeza": 0.9
+        },
+        {
+            "curso": "artes",
+            "resposta": 2,
+            "certeza": 0.99
+        },
+		{
+            "curso": "medicina",
+            "resposta":2,
+            "certeza": 0.9
+        },
+		{
+            "curso": "geografia",
+            "resposta":2,
+            "certeza": 0.9
+        }
+    ],
+}

@@ -1,0 +1,33 @@
+{
+    "texto": "Toronto é uma cidade de qual país?",
+    "respostas": [
+        "China",
+        "Rússia",
+        "Canadá",
+        "Austrália"
+    ],
+    "resposta_correta": 2,
+    "dificuldade": 1,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 2,
+            "certeza": 0.7
+        },
+        {
+            "curso": "artes",
+            "resposta": 2,
+            "certeza": 0.8
+        },
+		{
+            "curso": "medicina",
+            "resposta":2,
+            "certeza": 0.9
+        },
+		{
+            "curso": "geografia",
+            "resposta":2,
+            "certeza": 0.99
+        }
+    ],
+}

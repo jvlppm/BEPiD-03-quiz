@@ -1,0 +1,33 @@
+{
+    "texto": "O abacaxi é originário de que país?",
+    "respostas": [
+        "Estados Unidos",
+        "Brasil",
+        "Colômbia",
+        "Venezuela"
+    ],
+    "resposta_correta": 1,
+    "dificuldade": 2,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 3,
+            "certeza": 0.3
+        },
+        {
+            "curso": "artes",
+            "resposta": 2,
+            "certeza": 0.1
+        },
+		{
+            "curso": "medicina",
+            "resposta":0,
+            "certeza": 0.4
+        },
+		{
+            "curso": "geografia",
+            "resposta":1,
+            "certeza": 0.9
+        }
+    ],
+}

@@ -13,4 +13,6 @@
 
 @property Game* game;
 
+- (void) endGame;
+
 @end

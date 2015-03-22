@@ -1,0 +1,33 @@
+{
+    "texto": "Que profissional conduz o elevador?",
+    "respostas": [
+        "Condutor",
+        "Elevadorista",
+        "Ascensorista",
+        "Botonista"
+    ],
+    "resposta_correta": 2,
+    "dificuldade": 1,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 2,
+            "certeza": 0.8
+        },
+        {
+            "curso": "artes",
+            "resposta": 2,
+            "certeza": 0.7
+        },
+		{
+            "curso": "medicina",
+            "resposta":2,
+            "certeza": 0.9
+        },
+		{
+            "curso": "geografia",
+            "resposta":2,
+            "certeza": 0.8
+        }
+    ],
+}

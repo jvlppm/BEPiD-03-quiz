@@ -13,7 +13,6 @@
 		CFE57B101ABA2BD1008C09C3 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B0F1ABA2BD1008C09C3 /* Game.m */; };
 		CFE57B131ABA2D15008C09C3 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B121ABA2D15008C09C3 /* Question.m */; };
 		CFE57B161ABA3012008C09C3 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B151ABA3012008C09C3 /* Answer.m */; };
-		CFE57B191ABA3215008C09C3 /* Question0.json in Resources */ = {isa = PBXBuildFile; fileRef = CFE57B181ABA3215008C09C3 /* Question0.json */; };
 		CFE57B1F1ABA3F59008C09C3 /* Json.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B1E1ABA3F59008C09C3 /* Json.m */; };
 		CFE57B241ABA440B008C09C3 /* StudentOpinion.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE57B231ABA440B008C09C3 /* StudentOpinion.m */; };
 		E831E99F1AB91F0F005D5635 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E831E99E1AB91F0F005D5635 /* main.m */; };
@@ -28,6 +27,34 @@
 		E84D47641ABDEDCC0051B3CD /* modifier-128.png in Resources */ = {isa = PBXBuildFile; fileRef = E84D47611ABDEDCC0051B3CD /* modifier-128.png */; };
 		E8ABE6C51ABF2C5100F4AC7C /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE6C41ABF2C5100F4AC7C /* GameOverViewController.m */; };
 		E8ABE6C81ABF52DB00F4AC7C /* HighScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE6C71ABF52DB00F4AC7C /* HighScoreViewController.m */; };
+		E8ABE6E51ABF652200F4AC7C /* Question1.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6C91ABF652200F4AC7C /* Question1.json */; };
+		E8ABE6E61ABF652200F4AC7C /* Question2.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6CA1ABF652200F4AC7C /* Question2.json */; };
+		E8ABE6E71ABF652200F4AC7C /* Question3.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6CB1ABF652200F4AC7C /* Question3.json */; };
+		E8ABE6E81ABF652200F4AC7C /* Question4.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6CC1ABF652200F4AC7C /* Question4.json */; };
+		E8ABE6E91ABF652200F4AC7C /* Question5.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6CD1ABF652200F4AC7C /* Question5.json */; };
+		E8ABE6EA1ABF652200F4AC7C /* Question6.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6CE1ABF652200F4AC7C /* Question6.json */; };
+		E8ABE6EB1ABF652200F4AC7C /* Question7.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6CF1ABF652200F4AC7C /* Question7.json */; };
+		E8ABE6EC1ABF652200F4AC7C /* Question8.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6D01ABF652200F4AC7C /* Question8.json */; };
+		E8ABE6ED1ABF652200F4AC7C /* Question9.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6D11ABF652200F4AC7C /* Question9.json */; };
+		E8ABE6EE1ABF652200F4AC7C /* Question10.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6D21ABF652200F4AC7C /* Question10.json */; };
+		E8ABE6EF1ABF652200F4AC7C /* Question11.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6D31ABF652200F4AC7C /* Question11.json */; };
+		E8ABE6F01ABF652200F4AC7C /* Question12.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6D41ABF652200F4AC7C /* Question12.json */; };
+		E8ABE6F11ABF652200F4AC7C /* Question13.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6D51ABF652200F4AC7C /* Question13.json */; };
+		E8ABE6F21ABF652200F4AC7C /* Question14.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6D61ABF652200F4AC7C /* Question14.json */; };
+		E8ABE6F31ABF652200F4AC7C /* Question15.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6D71ABF652200F4AC7C /* Question15.json */; };
+		E8ABE6F41ABF652200F4AC7C /* Question16.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6D81ABF652200F4AC7C /* Question16.json */; };
+		E8ABE6F51ABF652200F4AC7C /* Question17.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6D91ABF652200F4AC7C /* Question17.json */; };
+		E8ABE6F61ABF652200F4AC7C /* Question18.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6DA1ABF652200F4AC7C /* Question18.json */; };
+		E8ABE6F71ABF652200F4AC7C /* Question19.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6DB1ABF652200F4AC7C /* Question19.json */; };
+		E8ABE6F81ABF652200F4AC7C /* Question20.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6DC1ABF652200F4AC7C /* Question20.json */; };
+		E8ABE6F91ABF652200F4AC7C /* Question21.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6DD1ABF652200F4AC7C /* Question21.json */; };
+		E8ABE6FA1ABF652200F4AC7C /* Question22.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6DE1ABF652200F4AC7C /* Question22.json */; };
+		E8ABE6FB1ABF652200F4AC7C /* Question23.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6DF1ABF652200F4AC7C /* Question23.json */; };
+		E8ABE6FC1ABF652200F4AC7C /* Question24.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6E01ABF652200F4AC7C /* Question24.json */; };
+		E8ABE6FD1ABF652200F4AC7C /* Question25.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6E11ABF652200F4AC7C /* Question25.json */; };
+		E8ABE6FE1ABF652200F4AC7C /* Question26.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6E21ABF652200F4AC7C /* Question26.json */; };
+		E8ABE6FF1ABF652200F4AC7C /* Question27.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6E31ABF652200F4AC7C /* Question27.json */; };
+		E8ABE7001ABF652200F4AC7C /* Question0.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6E41ABF652200F4AC7C /* Question0.json */; };
 		E8FD43591ABE1B0700798D03 /* QuestionState.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD43581ABE1B0700798D03 /* QuestionState.m */; };
 		E8FD435C1ABE275E00798D03 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD435B1ABE275E00798D03 /* GameViewController.m */; };
 		E8FD435F1ABE2A7100798D03 /* GameQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD435E1ABE2A7100798D03 /* GameQuestionViewController.m */; };
@@ -58,7 +85,6 @@
 		CFE57B121ABA2D15008C09C3 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Question.m; path = Model/Question.m; sourceTree = "<group>"; };
 		CFE57B141ABA3012008C09C3 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answer.h; path = Model/Answer.h; sourceTree = "<group>"; };
 		CFE57B151ABA3012008C09C3 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Answer.m; path = Model/Answer.m; sourceTree = "<group>"; };
-		CFE57B181ABA3215008C09C3 /* Question0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question0.json; path = Data/Question0.json; sourceTree = "<group>"; };
 		CFE57B1D1ABA3F59008C09C3 /* Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Json.h; path = Model/Json.h; sourceTree = "<group>"; };
 		CFE57B1E1ABA3F59008C09C3 /* Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Json.m; path = Model/Json.m; sourceTree = "<group>"; };
 		CFE57B221ABA440B008C09C3 /* StudentOpinion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentOpinion.h; path = Model/StudentOpinion.h; sourceTree = "<group>"; };
@@ -83,6 +109,34 @@
 		E8ABE6C41ABF2C5100F4AC7C /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
 		E8ABE6C61ABF52DB00F4AC7C /* HighScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoreViewController.h; sourceTree = "<group>"; };
 		E8ABE6C71ABF52DB00F4AC7C /* HighScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScoreViewController.m; sourceTree = "<group>"; };
+		E8ABE6C91ABF652200F4AC7C /* Question1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question1.json; path = Data/Question1.json; sourceTree = "<group>"; };
+		E8ABE6CA1ABF652200F4AC7C /* Question2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question2.json; path = Data/Question2.json; sourceTree = "<group>"; };
+		E8ABE6CB1ABF652200F4AC7C /* Question3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question3.json; path = Data/Question3.json; sourceTree = "<group>"; };
+		E8ABE6CC1ABF652200F4AC7C /* Question4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question4.json; path = Data/Question4.json; sourceTree = "<group>"; };
+		E8ABE6CD1ABF652200F4AC7C /* Question5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question5.json; path = Data/Question5.json; sourceTree = "<group>"; };
+		E8ABE6CE1ABF652200F4AC7C /* Question6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question6.json; path = Data/Question6.json; sourceTree = "<group>"; };
+		E8ABE6CF1ABF652200F4AC7C /* Question7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question7.json; path = Data/Question7.json; sourceTree = "<group>"; };
+		E8ABE6D01ABF652200F4AC7C /* Question8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question8.json; path = Data/Question8.json; sourceTree = "<group>"; };
+		E8ABE6D11ABF652200F4AC7C /* Question9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question9.json; path = Data/Question9.json; sourceTree = "<group>"; };
+		E8ABE6D21ABF652200F4AC7C /* Question10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question10.json; path = Data/Question10.json; sourceTree = "<group>"; };
+		E8ABE6D31ABF652200F4AC7C /* Question11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question11.json; path = Data/Question11.json; sourceTree = "<group>"; };
+		E8ABE6D41ABF652200F4AC7C /* Question12.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question12.json; path = Data/Question12.json; sourceTree = "<group>"; };
+		E8ABE6D51ABF652200F4AC7C /* Question13.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question13.json; path = Data/Question13.json; sourceTree = "<group>"; };
+		E8ABE6D61ABF652200F4AC7C /* Question14.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question14.json; path = Data/Question14.json; sourceTree = "<group>"; };
+		E8ABE6D71ABF652200F4AC7C /* Question15.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question15.json; path = Data/Question15.json; sourceTree = "<group>"; };
+		E8ABE6D81ABF652200F4AC7C /* Question16.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question16.json; path = Data/Question16.json; sourceTree = "<group>"; };
+		E8ABE6D91ABF652200F4AC7C /* Question17.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question17.json; path = Data/Question17.json; sourceTree = "<group>"; };
+		E8ABE6DA1ABF652200F4AC7C /* Question18.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question18.json; path = Data/Question18.json; sourceTree = "<group>"; };
+		E8ABE6DB1ABF652200F4AC7C /* Question19.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question19.json; path = Data/Question19.json; sourceTree = "<group>"; };
+		E8ABE6DC1ABF652200F4AC7C /* Question20.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question20.json; path = Data/Question20.json; sourceTree = "<group>"; };
+		E8ABE6DD1ABF652200F4AC7C /* Question21.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question21.json; path = Data/Question21.json; sourceTree = "<group>"; };
+		E8ABE6DE1ABF652200F4AC7C /* Question22.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question22.json; path = Data/Question22.json; sourceTree = "<group>"; };
+		E8ABE6DF1ABF652200F4AC7C /* Question23.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question23.json; path = Data/Question23.json; sourceTree = "<group>"; };
+		E8ABE6E01ABF652200F4AC7C /* Question24.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question24.json; path = Data/Question24.json; sourceTree = "<group>"; };
+		E8ABE6E11ABF652200F4AC7C /* Question25.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question25.json; path = Data/Question25.json; sourceTree = "<group>"; };
+		E8ABE6E21ABF652200F4AC7C /* Question26.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question26.json; path = Data/Question26.json; sourceTree = "<group>"; };
+		E8ABE6E31ABF652200F4AC7C /* Question27.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question27.json; path = Data/Question27.json; sourceTree = "<group>"; };
+		E8ABE6E41ABF652200F4AC7C /* Question0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question0.json; path = Data/Question0.json; sourceTree = "<group>"; };
 		E8FD43571ABE1B0700798D03 /* QuestionState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionState.h; path = Model/QuestionState.h; sourceTree = "<group>"; };
 		E8FD43581ABE1B0700798D03 /* QuestionState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionState.m; path = Model/QuestionState.m; sourceTree = "<group>"; };
 		E8FD435A1ABE275E00798D03 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
@@ -148,7 +202,34 @@
 		CFE57B171ABA31AC008C09C3 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				CFE57B181ABA3215008C09C3 /* Question0.json */,
+				E8ABE6E41ABF652200F4AC7C /* Question0.json */,
+				E8ABE6C91ABF652200F4AC7C /* Question1.json */,
+				E8ABE6CA1ABF652200F4AC7C /* Question2.json */,
+				E8ABE6CB1ABF652200F4AC7C /* Question3.json */,
+				E8ABE6CC1ABF652200F4AC7C /* Question4.json */,
+				E8ABE6CD1ABF652200F4AC7C /* Question5.json */,
+				E8ABE6CE1ABF652200F4AC7C /* Question6.json */,
+				E8ABE6CF1ABF652200F4AC7C /* Question7.json */,
+				E8ABE6D01ABF652200F4AC7C /* Question8.json */,
+				E8ABE6D11ABF652200F4AC7C /* Question9.json */,
+				E8ABE6D21ABF652200F4AC7C /* Question10.json */,
+				E8ABE6D31ABF652200F4AC7C /* Question11.json */,
+				E8ABE6D41ABF652200F4AC7C /* Question12.json */,
+				E8ABE6D51ABF652200F4AC7C /* Question13.json */,
+				E8ABE6D61ABF652200F4AC7C /* Question14.json */,
+				E8ABE6D71ABF652200F4AC7C /* Question15.json */,
+				E8ABE6D81ABF652200F4AC7C /* Question16.json */,
+				E8ABE6D91ABF652200F4AC7C /* Question17.json */,
+				E8ABE6DA1ABF652200F4AC7C /* Question18.json */,
+				E8ABE6DB1ABF652200F4AC7C /* Question19.json */,
+				E8ABE6DC1ABF652200F4AC7C /* Question20.json */,
+				E8ABE6DD1ABF652200F4AC7C /* Question21.json */,
+				E8ABE6DE1ABF652200F4AC7C /* Question22.json */,
+				E8ABE6DF1ABF652200F4AC7C /* Question23.json */,
+				E8ABE6E01ABF652200F4AC7C /* Question24.json */,
+				E8ABE6E11ABF652200F4AC7C /* Question25.json */,
+				E8ABE6E21ABF652200F4AC7C /* Question26.json */,
+				E8ABE6E31ABF652200F4AC7C /* Question27.json */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -318,13 +399,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8ABE6E81ABF652200F4AC7C /* Question4.json in Resources */,
+				E8ABE6EB1ABF652200F4AC7C /* Question7.json in Resources */,
+				E8ABE6FC1ABF652200F4AC7C /* Question24.json in Resources */,
+				E8ABE6FA1ABF652200F4AC7C /* Question22.json in Resources */,
+				E8ABE6F61ABF652200F4AC7C /* Question18.json in Resources */,
+				E8ABE6F01ABF652200F4AC7C /* Question12.json in Resources */,
+				E8ABE6FE1ABF652200F4AC7C /* Question26.json in Resources */,
 				E831E9A81AB91F10005D5635 /* Main.storyboard in Resources */,
 				E84D47621ABDEDCC0051B3CD /* 475332-flag-128.png in Resources */,
+				E8ABE6EA1ABF652200F4AC7C /* Question6.json in Resources */,
+				E8ABE6EC1ABF652200F4AC7C /* Question8.json in Resources */,
+				E8ABE6F51ABF652200F4AC7C /* Question17.json in Resources */,
+				E8ABE7001ABF652200F4AC7C /* Question0.json in Resources */,
+				E8ABE6F11ABF652200F4AC7C /* Question13.json in Resources */,
+				E8ABE6E61ABF652200F4AC7C /* Question2.json in Resources */,
+				E8ABE6FB1ABF652200F4AC7C /* Question23.json in Resources */,
+				E8ABE6ED1ABF652200F4AC7C /* Question9.json in Resources */,
 				E831E9AD1AB91F10005D5635 /* LaunchScreen.xib in Resources */,
+				E8ABE6F31ABF652200F4AC7C /* Question15.json in Resources */,
+				E8ABE6EE1ABF652200F4AC7C /* Question10.json in Resources */,
+				E8ABE6F81ABF652200F4AC7C /* Question20.json in Resources */,
 				E84D47641ABDEDCC0051B3CD /* modifier-128.png in Resources */,
+				E8ABE6E71ABF652200F4AC7C /* Question3.json in Resources */,
 				E84D47631ABDEDCC0051B3CD /* 475333-announce-128.png in Resources */,
-				CFE57B191ABA3215008C09C3 /* Question0.json in Resources */,
+				E8ABE6FD1ABF652200F4AC7C /* Question25.json in Resources */,
+				E8ABE6F41ABF652200F4AC7C /* Question16.json in Resources */,
+				E8ABE6EF1ABF652200F4AC7C /* Question11.json in Resources */,
+				E8ABE6F21ABF652200F4AC7C /* Question14.json in Resources */,
 				E831E9AA1AB91F10005D5635 /* Images.xcassets in Resources */,
+				E8ABE6F71ABF652200F4AC7C /* Question19.json in Resources */,
+				E8ABE6E51ABF652200F4AC7C /* Question1.json in Resources */,
+				E8ABE6F91ABF652200F4AC7C /* Question21.json in Resources */,
+				E8ABE6FF1ABF652200F4AC7C /* Question27.json in Resources */,
+				E8ABE6E91ABF652200F4AC7C /* Question5.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

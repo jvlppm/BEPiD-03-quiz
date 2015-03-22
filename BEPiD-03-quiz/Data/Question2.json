@@ -1,33 +1,33 @@
 {
-    "texto": "O que é Ornitorrinco?",
+    "texto": "O que é Via Láctea?",
     "respostas": [
-        "Vulcão",
-        "Rio",
-        "Legume",
-        "Animal"
+        "Marca de Leite",
+        "Civilização Antiga",
+        "Marca de Carro",
+        "Galáxia"
     ],
     "resposta_correta": 3,
     "dificuldade": 0,
     "universitários": [
         {
             "curso": "matematica",
-            "resposta": 3,
-            "certeza": 0.8
+            "resposta": 0,
+            "certeza": 0.9
         },
         {
             "curso": "artes",
-            "resposta": 3,
+            "resposta": 0,
             "certeza": 0.9
         },
 		{
             "curso": "medicina",
-            "resposta":3,
-            "certeza": 0.95
+            "resposta":0,
+            "certeza": 0.9
         },
 		{
             "curso": "geografia",
-            "resposta":3,
-            "certeza": 0.99
+            "resposta":0,
+            "certeza": 0.95
         }
     ],
 }

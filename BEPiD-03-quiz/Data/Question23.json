@@ -1,33 +1,33 @@
 {
-    "texto": "O que é Ornitorrinco?",
+    "texto": "Quem é a mulher do Tarzan?",
     "respostas": [
-        "Vulcão",
-        "Rio",
-        "Legume",
-        "Animal"
+        "Diana",
+        "Louis Lane",
+        "Jane",
+        "Chita"
     ],
-    "resposta_correta": 3,
+    "resposta_correta": 2,
     "dificuldade": 0,
     "universitários": [
         {
             "curso": "matematica",
-            "resposta": 3,
+            "resposta": 2,
             "certeza": 0.8
         },
         {
             "curso": "artes",
-            "resposta": 3,
-            "certeza": 0.9
+            "resposta": 2,
+            "certeza": 0.99
         },
 		{
             "curso": "medicina",
             "resposta":3,
-            "certeza": 0.95
+            "certeza": 0.5
         },
 		{
             "curso": "geografia",
-            "resposta":3,
-            "certeza": 0.99
+            "resposta":2,
+            "certeza": 0.7
         }
     ],
 }

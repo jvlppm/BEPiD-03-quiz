@@ -1,32 +1,32 @@
 {
-    "texto": "O que é Ornitorrinco?",
+    "texto": "Qual desses símbolos significa quilometro?",
     "respostas": [
-        "Vulcão",
-        "Rio",
-        "Legume",
-        "Animal"
+        "KD",
+        "KM",
+        "KK",
+        "KG"
     ],
-    "resposta_correta": 3,
+    "resposta_correta": 1,
     "dificuldade": 0,
     "universitários": [
         {
             "curso": "matematica",
-            "resposta": 3,
-            "certeza": 0.8
+            "resposta": 1,
+            "certeza": 0.99
         },
         {
             "curso": "artes",
-            "resposta": 3,
+            "resposta": 1,
             "certeza": 0.9
         },
 		{
             "curso": "medicina",
-            "resposta":3,
+            "resposta":1,
             "certeza": 0.95
         },
 		{
             "curso": "geografia",
-            "resposta":3,
+            "resposta":1,
             "certeza": 0.99
         }
     ],

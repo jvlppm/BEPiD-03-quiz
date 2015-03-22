@@ -1,0 +1,33 @@
+{
+    "texto": "Como se chama o lago salgado, que é parte mais baixa da Terra, situado na Palestina?",
+    "respostas": [
+        "Mar Morto",
+        "Mar Cáspio",
+        "Mar Mediterrâneo",
+        "Mar do Caribe"
+    ],
+    "resposta_correta": 0,
+    "dificuldade": 1,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 0,
+            "certeza": 0.65
+        },
+        {
+            "curso": "artes",
+            "resposta": 0,
+            "certeza": 0.55
+        },
+		{
+            "curso": "medicina",
+            "resposta":0,
+            "certeza": 0.55
+        },
+		{
+            "curso": "geografia",
+            "resposta":0,
+            "certeza": 0.95
+        }
+    ],
+}

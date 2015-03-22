@@ -1,0 +1,33 @@
+{
+    "texto": "A planície da Manchúria encontra-se em qual país?",
+    "respostas": [
+        "China",
+        "Mongólia",
+        "Irã",
+        "Angola"
+    ],
+    "resposta_correta": 0,
+    "dificuldade": 2,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 1,
+            "certeza": 0.2
+        },
+        {
+            "curso": "artes",
+            "resposta": 0,
+            "certeza": 0.7
+        },
+		{
+            "curso": "medicina",
+            "resposta":0,
+            "certeza": 0.6
+        },
+		{
+            "curso": "geografia",
+            "resposta":0,
+            "certeza": 0.9
+        }
+    ],
+}

@@ -1,10 +1,10 @@
 {
-    "texto": "O que é Ornitorrinco?",
+    "texto": "As Olimpíadas de 1988 aconteceram em Seul, capital de que país?",
     "respostas": [
-        "Vulcão",
-        "Rio",
-        "Legume",
-        "Animal"
+        "Países Baixos",
+        "Grécia",
+        "Alemanha",
+        "Coréia do Sul"
     ],
     "resposta_correta": 3,
     "dificuldade": 0,
@@ -12,17 +12,17 @@
         {
             "curso": "matematica",
             "resposta": 3,
-            "certeza": 0.8
+            "certeza": 0.9
         },
         {
             "curso": "artes",
             "resposta": 3,
-            "certeza": 0.9
+            "certeza": 0.8
         },
 		{
             "curso": "medicina",
             "resposta":3,
-            "certeza": 0.95
+            "certeza": 0.9
         },
 		{
             "curso": "geografia",

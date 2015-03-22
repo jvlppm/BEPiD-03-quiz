@@ -21,6 +21,7 @@
     unsigned long _questionIndex;
     BOOL _usedSkip;
     BOOL _usedEliminate;
+    BOOL _usedStudentHelp;
     BOOL _usingHelp;
 }
 
@@ -92,10 +93,29 @@
         [NSException raise:@"Skip cannot be used" format:@"Skip move not allowed"];
     }
     
-    QuestionState* current = self.currentQuestion;
-    current.status = Skip;
+    self.currentQuestion.status = Skip;
     _usedSkip = YES;
     [self advanceQuestion];
+}
+
+- (BOOL)canAskStudent {
+    return !_usedStudentHelp;
+}
+
+- (NSArray *)availableStudents{
+    QuestionState* current = self.currentQuestion;
+    if (current)
+        return [current.question getStudents];
+    return @[];
+}
+
+- (void)askStudent:(NSString *)course{
+    if (![self canAskStudent]) {
+        [NSException raise:@"Help cannot be used" format:@"Student help already used"];
+    }
+    
+    [self.currentQuestion.question askCollegeStudent:course];
+    _usedStudentHelp = YES;
 }
 
 - (BOOL) canLeave {

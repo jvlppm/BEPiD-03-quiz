@@ -1,0 +1,33 @@
+{
+    "texto": "Em que século ocorreu a descoberta do ouro no Paraná?",
+    "respostas": [
+        "Século XVI",
+        "Século XVII",
+        "Século XVIII",
+        "Século XIX"
+    ],
+    "resposta_correta": 1,
+    "dificuldade": 5,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 3,
+            "certeza": 0.1
+        },
+        {
+            "curso": "artes",
+            "resposta": 2,
+            "certeza": 0.1
+        },
+		{
+            "curso": "medicina",
+            "resposta":0,
+            "certeza": 0.1
+        },
+		{
+            "curso": "geografia",
+            "resposta":1,
+            "certeza": 0.6
+        }
+    ],
+}

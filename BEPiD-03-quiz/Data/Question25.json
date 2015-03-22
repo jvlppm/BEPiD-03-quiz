@@ -1,0 +1,33 @@
+{
+    "texto": "Como é chamado o homem sedutor, o conquistador irresistível?",
+    "respostas": [
+        "Dom Juan",
+        "Dom Dóca",
+        "Dom Galã",
+        "Dom Divino"
+    ],
+    "resposta_correta": 0,
+    "dificuldade": 0,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 0,
+            "certeza": 0.8
+        },
+        {
+            "curso": "artes",
+            "resposta": 0,
+            "certeza": 0.99
+        },
+		{
+            "curso": "medicina",
+            "resposta":0,
+            "certeza": 0.9
+        },
+		{
+            "curso": "geografia",
+            "resposta":0,
+            "certeza": 0.9
+        }
+    ],
+}

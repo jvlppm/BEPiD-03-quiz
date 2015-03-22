@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @class Question;
+@class StudentOpinion;
 
 @interface Answer : NSObject
 
 @property (readonly) Question* question;
 @property (readonly) NSString* text;
 @property BOOL eliminated;
+@property StudentOpinion* studentOpinion;
 
 + (Answer*) AnswerForQuestion: (Question*) question withText: (NSString*) text;
 - (instancetype) initWithQuestion: (Question*) question andText: (NSString*) text;

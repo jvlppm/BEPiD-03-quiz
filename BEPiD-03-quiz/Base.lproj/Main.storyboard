@@ -142,10 +142,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2R-7h-Y7t">
-                                        <rect key="frame" x="20" y="65" width="149" height="30"/>
-                                        <state key="normal" title="Ajuda dos estudantes">
+                                        <rect key="frame" x="20" y="65" width="159" height="30"/>
+                                        <state key="normal" title="Ajuda de um estudante">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="helpFromStudents:" destination="AMc-qu-XPV" eventType="touchUpInside" id="K2W-de-lXs"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esta opção só pode ser feita uma vez" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vg3-Um-i7B">
                                         <rect key="frame" x="20" y="95" width="210" height="15"/>
@@ -173,6 +176,9 @@
                                         <state key="normal" title="Finalizar com valor acumulado">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="finishGame:" destination="AMc-qu-XPV" eventType="touchUpInside" id="Pds-aE-bb8"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encerra jogo com total de R$ 1000,00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZV-qh-UKt">
                                         <rect key="frame" x="20" y="225" width="548" height="15"/>
@@ -217,9 +223,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Opções" image="modifier-128.png" id="su7-IX-bSb"/>
                     <connections>
+                        <outlet property="btnAskStudents" destination="q2R-7h-Y7t" id="eQm-XG-fqq"/>
                         <outlet property="btnLeaveGame" destination="Hek-RT-Mu6" id="T7C-0f-PZn"/>
                         <outlet property="btnRemove2WrongAnswers" destination="B6i-Rl-v5r" id="Tma-aK-daK"/>
                         <outlet property="btnSkipQuestion" destination="Roz-nq-OfS" id="wOV-fi-3nn"/>
+                        <outlet property="lblAskStudentsDescription" destination="Vg3-Um-i7B" id="KhE-Q1-dpT"/>
                         <outlet property="lblLeaveGameDescription" destination="GZV-qh-UKt" id="sBn-6m-fYH"/>
                         <outlet property="lblQuestion" destination="xaQ-Hu-GGU" id="lXT-wq-mgb"/>
                         <outlet property="lblRemove2WrongAnswersDescription" destination="z04-rF-2Xo" id="XFL-eE-yBf"/>
@@ -683,20 +691,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melhores resultados" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xn5-IK-0Zc">
-                                <rect key="frame" x="16" y="72" width="568" height="39"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
-                                </variation>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="l2j-pg-AGl">
-                                <rect key="frame" x="16" y="119" width="568" height="461"/>
+                                <rect key="frame" x="16" y="72" width="568" height="508"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ese-Dw-vRy" id="ArI-bm-Hfy"/>
@@ -706,13 +702,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xn5-IK-0Zc" firstAttribute="top" secondItem="vFN-6m-idR" secondAttribute="bottom" constant="8" id="0z8-5l-eWt"/>
-                            <constraint firstItem="xn5-IK-0Zc" firstAttribute="leading" secondItem="VQt-sH-8Kx" secondAttribute="leadingMargin" id="7YY-0Q-xmF"/>
-                            <constraint firstItem="xn5-IK-0Zc" firstAttribute="trailing" secondItem="VQt-sH-8Kx" secondAttribute="trailingMargin" id="NES-rY-RdT"/>
+                            <constraint firstItem="l2j-pg-AGl" firstAttribute="top" secondItem="vFN-6m-idR" secondAttribute="bottom" constant="8" id="CL2-yD-UPc"/>
                             <constraint firstItem="rlg-9p-CqP" firstAttribute="top" secondItem="l2j-pg-AGl" secondAttribute="bottom" constant="20" id="QrN-hT-Dz5"/>
                             <constraint firstItem="l2j-pg-AGl" firstAttribute="leading" secondItem="VQt-sH-8Kx" secondAttribute="leadingMargin" id="b5G-b4-Q9n"/>
                             <constraint firstItem="l2j-pg-AGl" firstAttribute="trailing" secondItem="VQt-sH-8Kx" secondAttribute="trailingMargin" id="tC5-Q9-Jo1"/>
-                            <constraint firstItem="l2j-pg-AGl" firstAttribute="top" secondItem="xn5-IK-0Zc" secondAttribute="bottom" constant="8" id="zw2-xW-pqM"/>
                         </constraints>
                     </view>
                 </viewController>

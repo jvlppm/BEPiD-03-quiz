@@ -1,0 +1,33 @@
+{
+    "texto": "Qual é a capital de Mato Grosso do Sul?",
+    "respostas": [
+        "São Paulo",
+        "Curitiba",
+        "Campo Grande",
+        "Porto Alegre"
+    ],
+    "resposta_correta": 2,
+    "dificuldade": 0,
+    "universitários": [
+        {
+            "curso": "matematica",
+            "resposta": 2,
+            "certeza": 0.85
+        },
+        {
+            "curso": "artes",
+            "resposta": 2,
+            "certeza": 0.65
+        },
+		{
+            "curso": "medicina",
+            "resposta":2,
+            "certeza": 0.75
+        },
+		{
+            "curso": "geografia",
+            "resposta":2,
+            "certeza": 0.95
+        }
+    ],
+}
