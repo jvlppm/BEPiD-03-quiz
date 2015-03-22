@@ -34,7 +34,7 @@
     if (self.game.currentQuestionNumber > self.game.state.count)
         self.lblProgressState.text = @"Finalizado";
     else
-        self.lblProgressState.text = [NSString stringWithFormat:@"%lu/%lu", self.game.currentQuestionNumber, self.game.state.count];
+        self.lblProgressState.text = [NSString stringWithFormat:@"%lu/%lu", self.game.currentQuestionNumber, (unsigned long)self.game.state.count];
 }
 
 #pragma mark - TableView
@@ -58,7 +58,7 @@
     }
     
     QuestionState* item = (QuestionState*)[self.game.state objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%lu - %@", indexPath.row + 1, item.question.text];
+    cell.textLabel.text = [NSString stringWithFormat:@"%d - %@", indexPath.row + 1, item.question.text];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"R$ %d,00", item.prize];
     
     switch (item.status) {

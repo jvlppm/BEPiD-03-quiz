@@ -8,6 +8,6 @@
 
 #import "GameViewController.h"
 
-@interface GameOverViewController : GameViewController
+@interface GameOverViewController : GameViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @end
