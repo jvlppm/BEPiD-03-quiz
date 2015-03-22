@@ -11,6 +11,7 @@
 #import "Answer.h"
 
 @interface GameProgressViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *lblProgressState;
 @property (weak, nonatomic) IBOutlet UILabel *lblAccumulatedPrize;
 
 @end
@@ -29,6 +30,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.lblAccumulatedPrize.text = [NSString stringWithFormat:@"R$ %d,00", self.game.accumulatedPrize];
+    
+    self.lblProgressState.text = [NSString stringWithFormat:@"%lu/%lu", self.game.currentQuestionNumber, self.game.state.count];
 }
 
 #pragma mark - TableView

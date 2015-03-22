@@ -26,6 +26,7 @@ typedef enum : NSUInteger {
 
 @interface Game : NSObject
 
+@property (readonly, getter=getCurrentQuestionNumber) unsigned long currentQuestionNumber;
 @property (readonly, getter=getCurrentQuestion) QuestionState* currentQuestion;
 @property (readonly, getter=getState) NSArray* state;
 @property (readonly) int accumulatedPrize;

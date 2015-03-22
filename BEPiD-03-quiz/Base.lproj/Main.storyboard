@@ -324,6 +324,7 @@
                     <tabBarItem key="tabBarItem" title="Progresso" image="475332-flag-128.png" id="3Mm-Mb-wVd"/>
                     <connections>
                         <outlet property="lblAccumulatedPrize" destination="z6x-7c-vqt" id="Aco-OT-sCi"/>
+                        <outlet property="lblProgressState" destination="cJS-mq-FU4" id="Ybg-8Y-Uxx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGQ-2R-BfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

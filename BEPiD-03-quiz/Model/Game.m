@@ -17,7 +17,7 @@
     NSMutableDictionary* _questions;
     NSMutableArray* _difficulties;
     NSMutableArray* _selectedQuestions;
-    int _questionIndex;
+    unsigned long _questionIndex;
     BOOL _usedSkip;
     BOOL _usedEliminate;
 }
@@ -41,6 +41,10 @@
 }
 
 #pragma mark - Game Methods
+
+- (unsigned long) getCurrentQuestionNumber {
+    return _questionIndex + 1;
+}
 
 - (QuestionState*) getCurrentQuestion {
     if (_questionIndex >= _selectedQuestions.count)
