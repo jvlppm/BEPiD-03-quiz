@@ -14,6 +14,7 @@
 
 @property (readonly) Question* question;
 @property (readonly) NSString* text;
+@property BOOL eliminated;
 
 + (Answer*) AnswerForQuestion: (Question*) question withText: (NSString*) text;
 - (instancetype) initWithQuestion: (Question*) question andText: (NSString*) text;

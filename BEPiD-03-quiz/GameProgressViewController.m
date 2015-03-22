@@ -7,6 +7,8 @@
 //
 
 #import "GameProgressViewController.h"
+#import "QuestionState.h"
+#import "Answer.h"
 
 @interface GameProgressViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lblAccumulatedPrize;
@@ -27,6 +29,52 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.lblAccumulatedPrize.text = [NSString stringWithFormat:@"R$ %d,00", self.game.accumulatedPrize];
+}
+
+#pragma mark - TableView
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    for(int i = 0; i < self.game.state.count; i++) {
+        QuestionState* q = [self.game.state objectAtIndex:i];
+        if (q.status == Waiting) {
+            return i;
+        }
+    }
+    return self.game.state.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"progressCell"];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"progressCell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    
+    QuestionState* item = (QuestionState*)[self.game.state objectAtIndex:indexPath.row];
+    cell.textLabel.text = item.question.text;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"R$ %d,00", item.prize];
+    
+    switch (item.status) {
+        case CorrectAnswer:
+        case CorrectWithHelp:
+            cell.textLabel.textColor = [UIColor greenColor];
+            break;
+        case WaitingAnswer:
+            cell.textLabel.textColor = [UIColor grayColor];
+            break;
+        case Waiting:
+            cell.textLabel.textColor = [UIColor lightGrayColor];
+            break;
+        default:
+            cell.textLabel.textColor = [UIColor blackColor];
+            cell.imageView.image = nil;
+            break;
+    }
+    
+    cell.detailTextLabel.textColor = [UIColor lightGrayColor];
+    
+    return cell;
 }
 
 /*

@@ -8,10 +8,14 @@
 
 #import "GameQuestionViewController.h"
 #import "QuestionState.h"
+#import "Answer.h"
 
-@interface GameQuestionViewController ()
+@interface GameQuestionViewController () {
+    QuestionState* qs;
+}
 @property (weak, nonatomic) IBOutlet UILabel *lblQuestion;
 @property (weak, nonatomic) IBOutlet UILabel *lblPrize;
+@property (weak, nonatomic) IBOutlet UITableView *tvAnswers;
 
 @end
 
@@ -28,10 +32,36 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    QuestionState* qs = self.game.currentQuestion;
+    qs = self.game.currentQuestion;
     
     self.lblQuestion.text = qs.question.text;
     self.lblPrize.text = [NSString stringWithFormat:@"R$ %d,00", qs.prize];
+    
+    [self.tvAnswers reloadData];
+}
+
+#pragma mark - TableView
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [qs.question countAnswers];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"answerCell"];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"answerCell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+    }
+
+    Answer* item = [qs.question getAnswer: indexPath.row];
+    cell.textLabel.text = item.text;
+    if (item.eliminated)
+        cell.textLabel.textColor = [UIColor lightGrayColor];
+    else
+        cell.textLabel.textColor = [UIColor blackColor];
+    
+    return cell;
 }
 
 /*

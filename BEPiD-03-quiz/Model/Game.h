@@ -13,18 +13,33 @@
 @class Answer;
 
 typedef enum : NSUInteger {
-    NextQuestion,
+    InGame,
     Lost,
     Won,
-} AnswerResponse;
+} GameStatus;
+
+typedef enum : NSUInteger {
+    CanSkip,
+    CannotSkipAgain,
+    CannotSkipLastQuestion,
+} SkipStatus;
 
 @interface Game : NSObject
 
 @property (readonly, getter=getCurrentQuestion) QuestionState* currentQuestion;
 @property (readonly, getter=getState) NSArray* state;
 @property (readonly) int accumulatedPrize;
+@property (readonly) GameStatus status;
 
 - (instancetype) init;
-- (AnswerResponse) answer: (Answer*) answer;
+- (void) answer: (Answer*) answer;
+
+- (SkipStatus) canSkip;
+- (void) skip;
+
+- (BOOL) canEliminateAnswers;
+- (void) eliminateAnswers: (int) quantity;
+
+- (BOOL) canLeave;
 
 @end

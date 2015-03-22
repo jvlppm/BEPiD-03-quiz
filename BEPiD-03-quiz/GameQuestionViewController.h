@@ -8,6 +8,6 @@
 
 #import "GameViewController.h"
 
-@interface GameQuestionViewController : GameViewController
+@interface GameQuestionViewController : GameViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

@@ -21,6 +21,7 @@ typedef enum : NSUInteger {
 @property QuestionStatus status;
 @property Question* question;
 @property int prize;
+@property Answer* answer;
 
 - (instancetype) initWithQuestion: (Question*) question;
 

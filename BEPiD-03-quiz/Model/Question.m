@@ -83,4 +83,19 @@
     return answer == _correctAnswer;
 }
 
+- (void) eliminateWrongAnswers: (int) quantity {
+    NSMutableArray* couldEliminate = [[NSMutableArray alloc] init];
+    for (Answer* answer in _answers) {
+        if (answer != _correctAnswer) {
+            [couldEliminate addObject:answer];
+        }
+    }
+    
+    [couldEliminate shuffle];
+    for(int i = 0; i < couldEliminate.count; i++) {
+        Answer* toEliminate = couldEliminate[i];
+        toEliminate.eliminated = i < quantity;
+    }
+}
+
 @end

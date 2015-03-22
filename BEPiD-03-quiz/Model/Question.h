@@ -25,6 +25,8 @@
 
 - (BOOL) correctAnswer: (Answer*) answer;
 
+- (void) eliminateWrongAnswers: (int) quantity;
+
 - (StudentOpinion*) askCollegeStudent: (NSString*) curso;
 
 @end

@@ -118,37 +118,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Pergunta Atual" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaQ-Hu-GGU">
-                                <rect key="frame" x="16" y="101" width="568" height="221"/>
+                                <rect key="frame" x="16" y="101" width="568" height="161"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHN-6c-w8H">
-                                <rect key="frame" x="16" y="330" width="568" height="205"/>
+                                <rect key="frame" x="16" y="270" width="568" height="265"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Roz-nq-OfS">
+                                        <rect key="frame" x="20" y="0.0" width="95" height="30"/>
+                                        <state key="normal" title="Pular questão">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="skipQuestion:" destination="AMc-qu-XPV" eventType="touchUpInside" id="8RI-6e-lIe"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esta opção só pode ser feita uma vez" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7y-uX-ePV">
-                                        <rect key="frame" x="20" y="38" width="210" height="15"/>
+                                        <rect key="frame" x="20" y="30" width="210" height="15"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2R-7h-Y7t">
-                                        <rect key="frame" x="20" y="61" width="149" height="30"/>
+                                        <rect key="frame" x="20" y="65" width="149" height="30"/>
                                         <state key="normal" title="Ajuda dos estudantes">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esta opção só pode ser feita uma vez" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vg3-Um-i7B">
-                                        <rect key="frame" x="20" y="99" width="210" height="15"/>
+                                        <rect key="frame" x="20" y="95" width="210" height="15"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6i-Rl-v5r">
-                                        <rect key="frame" x="20" y="122" width="211" height="30"/>
+                                        <rect key="frame" x="20" y="130" width="211" height="30"/>
                                         <state key="normal" title="Eliminar 2 respostas incorretas">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="eliminateWrongAnswers:" destination="AMc-qu-XPV" eventType="touchUpInside" id="Wpq-kH-iLy"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esta opção só pode ser feita uma vez" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z04-rF-2Xo">
                                         <rect key="frame" x="20" y="160" width="210" height="15"/>
@@ -156,26 +168,37 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Roz-nq-OfS">
-                                        <rect key="frame" x="20" y="0.0" width="95" height="30"/>
-                                        <state key="normal" title="Pular questão">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hek-RT-Mu6">
+                                        <rect key="frame" x="20" y="195" width="235" height="30"/>
+                                        <state key="normal" title="Sair do jogo com valor acumulado">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encerra jogo com total de R$ 1000,00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZV-qh-UKt">
+                                        <rect key="frame" x="20" y="225" width="548" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="t7y-uX-ePV" firstAttribute="top" secondItem="Roz-nq-OfS" secondAttribute="bottom" constant="8" id="2cU-LL-tPw"/>
+                                    <constraint firstItem="t7y-uX-ePV" firstAttribute="top" secondItem="Roz-nq-OfS" secondAttribute="bottom" id="2cU-LL-tPw"/>
                                     <constraint firstItem="Roz-nq-OfS" firstAttribute="leading" secondItem="HHN-6c-w8H" secondAttribute="leading" constant="20" id="4sX-Hl-Tcw"/>
-                                    <constraint firstAttribute="height" constant="205" id="7ar-up-u3I"/>
+                                    <constraint firstAttribute="height" constant="265" id="7ar-up-u3I"/>
                                     <constraint firstItem="z04-rF-2Xo" firstAttribute="leading" secondItem="HHN-6c-w8H" secondAttribute="leading" constant="20" id="Cpm-YM-dOV"/>
-                                    <constraint firstItem="z04-rF-2Xo" firstAttribute="top" secondItem="B6i-Rl-v5r" secondAttribute="bottom" constant="8" id="FAz-zy-Hph"/>
+                                    <constraint firstItem="z04-rF-2Xo" firstAttribute="top" secondItem="B6i-Rl-v5r" secondAttribute="bottom" id="FAz-zy-Hph"/>
                                     <constraint firstItem="B6i-Rl-v5r" firstAttribute="leading" secondItem="HHN-6c-w8H" secondAttribute="leading" constant="20" id="Ncr-d3-aX7"/>
-                                    <constraint firstItem="B6i-Rl-v5r" firstAttribute="top" secondItem="Vg3-Um-i7B" secondAttribute="bottom" constant="8" id="RCa-CJ-tB7"/>
+                                    <constraint firstItem="Hek-RT-Mu6" firstAttribute="top" secondItem="z04-rF-2Xo" secondAttribute="bottom" constant="20" id="Qng-Xn-3vb"/>
+                                    <constraint firstItem="B6i-Rl-v5r" firstAttribute="top" secondItem="Vg3-Um-i7B" secondAttribute="bottom" constant="20" id="RCa-CJ-tB7"/>
+                                    <constraint firstAttribute="trailing" secondItem="GZV-qh-UKt" secondAttribute="trailing" id="SuP-Ul-1n4"/>
+                                    <constraint firstItem="GZV-qh-UKt" firstAttribute="leading" secondItem="HHN-6c-w8H" secondAttribute="leading" constant="20" id="VpO-8F-XoY"/>
                                     <constraint firstItem="Vg3-Um-i7B" firstAttribute="leading" secondItem="HHN-6c-w8H" secondAttribute="leading" constant="20" id="Wdb-ZS-fjL"/>
-                                    <constraint firstItem="q2R-7h-Y7t" firstAttribute="top" secondItem="t7y-uX-ePV" secondAttribute="bottom" constant="8" id="eTf-fv-VSC"/>
+                                    <constraint firstItem="Hek-RT-Mu6" firstAttribute="leading" secondItem="HHN-6c-w8H" secondAttribute="leading" constant="20" id="Y1b-bO-sEz"/>
+                                    <constraint firstItem="q2R-7h-Y7t" firstAttribute="top" secondItem="t7y-uX-ePV" secondAttribute="bottom" constant="20" id="eTf-fv-VSC"/>
+                                    <constraint firstItem="GZV-qh-UKt" firstAttribute="top" secondItem="Hek-RT-Mu6" secondAttribute="bottom" id="lQa-cZ-MoC"/>
                                     <constraint firstItem="Roz-nq-OfS" firstAttribute="top" secondItem="HHN-6c-w8H" secondAttribute="top" id="rzE-NU-JrU"/>
-                                    <constraint firstItem="Vg3-Um-i7B" firstAttribute="top" secondItem="q2R-7h-Y7t" secondAttribute="bottom" constant="8" id="uAl-ad-9dM"/>
+                                    <constraint firstItem="Vg3-Um-i7B" firstAttribute="top" secondItem="q2R-7h-Y7t" secondAttribute="bottom" id="uAl-ad-9dM"/>
                                     <constraint firstItem="t7y-uX-ePV" firstAttribute="leading" secondItem="HHN-6c-w8H" secondAttribute="leading" constant="20" id="wHa-rq-Xw6"/>
                                     <constraint firstItem="q2R-7h-Y7t" firstAttribute="leading" secondItem="HHN-6c-w8H" secondAttribute="leading" constant="20" id="xvc-so-22N"/>
                                 </constraints>
@@ -194,7 +217,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Opções" image="modifier-128.png" id="su7-IX-bSb"/>
                     <connections>
+                        <outlet property="btnLeaveGame" destination="Hek-RT-Mu6" id="T7C-0f-PZn"/>
+                        <outlet property="btnRemove2WrongAnswers" destination="B6i-Rl-v5r" id="Tma-aK-daK"/>
+                        <outlet property="btnSkipQuestion" destination="Roz-nq-OfS" id="wOV-fi-3nn"/>
+                        <outlet property="lblLeaveGameDescription" destination="GZV-qh-UKt" id="sBn-6m-fYH"/>
                         <outlet property="lblQuestion" destination="xaQ-Hu-GGU" id="lXT-wq-mgb"/>
+                        <outlet property="lblRemove2WrongAnswersDescription" destination="z04-rF-2Xo" id="XFL-eE-yBf"/>
+                        <outlet property="lblSkipQuestionDescription" destination="t7y-uX-ePV" id="2tk-gd-ddw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGx-df-XBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -271,6 +300,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Fyp-0S-tPJ">
                                 <rect key="frame" x="16" y="130" width="568" height="413"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fKn-nR-mu6" id="BnL-9B-aFd"/>
+                                    <outlet property="delegate" destination="fKn-nR-mu6" id="Yc9-m9-W6M"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -336,7 +369,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Pergunta Atual" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMU-NI-SvW">
-                                <rect key="frame" x="16" y="101" width="568" height="221"/>
+                                <rect key="frame" x="16" y="101" width="568" height="161"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -347,6 +380,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="205" id="aHo-VF-kr1"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ies-uf-T8U" id="BDG-Z9-8VV"/>
+                                    <outlet property="delegate" destination="Ies-uf-T8U" id="1Dc-4w-DyJ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -359,7 +396,7 @@
                             <constraint firstItem="WMU-NI-SvW" firstAttribute="trailing" secondItem="Uuv-cp-99G" secondAttribute="trailingMargin" id="STa-fS-8kY"/>
                             <constraint firstItem="Wuy-rn-F2d" firstAttribute="leading" secondItem="Uuv-cp-99G" secondAttribute="leadingMargin" id="VGY-4m-u5b"/>
                             <constraint firstItem="Wuy-rn-F2d" firstAttribute="trailing" secondItem="Uuv-cp-99G" secondAttribute="trailingMargin" id="YI4-nf-0Lz"/>
-                            <constraint firstItem="Wuy-rn-F2d" firstAttribute="top" secondItem="WMU-NI-SvW" secondAttribute="bottom" constant="8" id="Zqu-ub-Det"/>
+                            <constraint firstItem="Wuy-rn-F2d" firstAttribute="top" secondItem="WMU-NI-SvW" secondAttribute="bottom" constant="68" id="Zqu-ub-Det"/>
                             <constraint firstItem="WMU-NI-SvW" firstAttribute="leading" secondItem="Uuv-cp-99G" secondAttribute="leadingMargin" id="yQc-ac-W5H"/>
                         </constraints>
                     </view>
@@ -369,6 +406,7 @@
                     <connections>
                         <outlet property="lblPrize" destination="igV-bl-iis" id="Ic3-YX-LPZ"/>
                         <outlet property="lblQuestion" destination="WMU-NI-SvW" id="ZHQ-Jh-EG2"/>
+                        <outlet property="tvAnswers" destination="Wuy-rn-F2d" id="yYz-G4-a7w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXv-EW-eRh" userLabel="First Responder" sceneMemberID="firstResponder"/>

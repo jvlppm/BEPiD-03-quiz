@@ -18,6 +18,8 @@
     NSMutableArray* _difficulties;
     NSMutableArray* _selectedQuestions;
     int _questionIndex;
+    BOOL _usedSkip;
+    BOOL _usedEliminate;
 }
 
 - (instancetype)init {
@@ -47,21 +49,56 @@
     return _selectedQuestions[_questionIndex];
 }
 
-- (AnswerResponse)answer:(Answer *)userAnswer {
-    QuestionState* current = _selectedQuestions[_questionIndex];
+- (void) answer:(Answer *)userAnswer {
+    QuestionState* current = self.currentQuestion;
     if ([userAnswer.question correctAnswer: userAnswer]) {
         current.status = CorrectAnswer;
+        current.answer = userAnswer;
         _accumulatedPrize += current.prize;
         [self advanceQuestion];
-        if (self.currentQuestion == nil)
-            return Won;
-        return NextQuestion;
     }
-    return Lost;
+    _status = Lost;
+}
+
+- (SkipStatus) canSkip {
+    if (_usedSkip)
+        return CannotSkipAgain;
+    if (_questionIndex >= _selectedQuestions.count - 1)
+        return CannotSkipLastQuestion;
+    return CanSkip;
+}
+
+- (void) skip {
+    if ([self canSkip] != CanSkip) {
+        [NSException raise:@"Skip cannot be used" format:@"Skip move not allowed"];
+    }
+    
+    QuestionState* current = self.currentQuestion;
+    current.status = Skip;
+    _usedSkip = YES;
+    [self advanceQuestion];
+}
+
+- (BOOL) canLeave {
+    return _accumulatedPrize > 0;
 }
 
 - (NSArray*) getState {
     return _selectedQuestions;
+}
+
+- (BOOL) canEliminateAnswers {
+    return !_usedEliminate;
+}
+
+- (void) eliminateAnswers: (int) quantity {
+    if (![self canEliminateAnswers]) {
+        [NSException raise:@"Eliminate wrong answers option already used" format:@"This options can only be used once"];
+    }
+    _usedEliminate = YES;
+    
+    QuestionState* current = self.currentQuestion;
+    [current.question eliminateWrongAnswers: quantity];
 }
 
 #pragma mark - Helper Methods
@@ -70,7 +107,10 @@
     _questionIndex++;
     if (_questionIndex < _selectedQuestions.count) {
         ((QuestionState*)_selectedQuestions[_questionIndex]).status = WaitingAnswer;
+        _status = InGame;
     }
+    else
+        _status = Won;
 }
 
 - (void) loadQuestions {
