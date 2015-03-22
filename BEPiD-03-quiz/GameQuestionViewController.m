@@ -62,7 +62,7 @@
         Answer* answer = [qs.question getAnswer: alertView.tag];
         [self.game answer:answer];
         qs = self.game.currentQuestion;
-        NSLog(@"Game status: %u", self.game.status);
+        NSLog(@"Game status: %lu", self.game.status);
         [self reload];
         if (self.game.status != InGame) {
             [self endGame];

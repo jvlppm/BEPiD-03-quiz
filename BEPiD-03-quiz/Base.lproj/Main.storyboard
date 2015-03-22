@@ -535,11 +535,15 @@
                         <outlet property="lblAccumulatedValue" destination="E6J-VK-AZG" id="CgB-sU-DR3"/>
                         <outlet property="lblFinalScoreValue" destination="Lpp-UX-9BM" id="eJm-70-C0F"/>
                         <outlet property="lblMessage" destination="MAJ-pP-q85" id="amv-Yv-a7m"/>
+                        <outlet property="lblName" destination="zPt-Rp-ft3" id="BW3-Q6-fvz"/>
+                        <outlet property="lblScorePositionMessage" destination="rWM-wg-yZP" id="pMQ-oH-eSx"/>
                         <outlet property="lblScorePositionValue" destination="2SG-7q-cEh" id="t0Z-0Z-2Im"/>
                         <outlet property="lblWrongAnswerMessage" destination="SbV-i7-nVO" id="g07-3p-4Tb"/>
                         <outlet property="lblWrongAnswerValue" destination="enz-xi-dr6" id="knc-m9-ulM"/>
                         <outlet property="tfPlayerName" destination="Axe-Yv-avG" id="hSG-it-jqo"/>
+                        <outlet property="tfSelectName" destination="sO8-ss-HcR" id="unc-dw-T2H"/>
                         <outlet property="tfSelectPlayerName" destination="sO8-ss-HcR" id="O3u-lq-jYw"/>
+                        <outlet property="tfTypeName" destination="Axe-Yv-avG" id="9Ah-Oy-rBz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cr5-vs-vXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -679,11 +683,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top scores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xn5-IK-0Zc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melhores resultados" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xn5-IK-0Zc">
                                 <rect key="frame" x="16" y="72" width="568" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                </variation>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="l2j-pg-AGl">
                                 <rect key="frame" x="16" y="119" width="568" height="461"/>

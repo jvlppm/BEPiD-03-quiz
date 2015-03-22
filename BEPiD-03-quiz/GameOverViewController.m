@@ -14,6 +14,11 @@
 @interface GameOverViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lblMessage;
 @property (weak, nonatomic) IBOutlet UILabel *lblAccumulatedValue;
+@property (weak, nonatomic) IBOutlet UILabel *lblScorePositionMessage;
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
+@property (weak, nonatomic) IBOutlet UITextField *tfTypeName;
+@property (weak, nonatomic) IBOutlet UITextField *tfSelectName;
+
 @property (weak, nonatomic) IBOutlet UILabel *lblScorePositionValue;
 @property (weak, nonatomic) IBOutlet UILabel *lblFinalScoreValue;
 @property (weak, nonatomic) IBOutlet UILabel *lblWrongAnswerMessage;
@@ -40,13 +45,12 @@
     
     NSMutableArray* playerNames = [[NSMutableArray alloc] init];
     
-    [playerNames addObject:@"Anônimo"];
-    
     for (NSString* name in [hs playerNames]) {
         if (name != nil && ![name isEqualToString:@"Anônimo"])
             [playerNames addObject:name];
     }
     
+    [playerNames addObject:@"Anônimo"];
     [playerNames addObject:@"Digitar nome"];
     
     players = playerNames;
@@ -75,7 +79,18 @@
 - (void) refreshData {
     self.lblAccumulatedValue.text = [NSString stringWithFormat:@"R$ %d,00", self.game.accumulatedPrize];
     
-    self.lblScorePositionValue.text = [NSString stringWithFormat:@"%d", [hs getPositionFor:self.game.score]];
+    int position = [hs getPositionFor:self.game.score];
+    
+    self.lblScorePositionValue.text = [NSString stringWithFormat:@"%d", position];
+    
+    if (position > MAX_SCORES) {
+        self.btnSave.hidden =
+        self.tfSelectName.hidden =
+        self.tfTypeName.hidden =
+        self.lblName.hidden =
+        self.lblScorePositionMessage.hidden =
+        self.lblScorePositionValue.hidden = YES;
+    }
     
     self.lblFinalScoreValue.text = [NSString stringWithFormat:@"R$ %d,00", self.game.score.points];
     
@@ -136,14 +151,9 @@
         [self.tfPlayerName becomeFirstResponder];
     }
     else {
-        if (row == 0) {
-            self.tfSelectPlayerName.text =
-            self.tfPlayerName.text = nil;
-        }
-        else {
-            self.tfSelectPlayerName.text =
-            self.tfPlayerName.text = players[row];
-        }
+        self.tfSelectPlayerName.text =
+        self.tfPlayerName.text = players[row];
+        
         [self.tfSelectPlayerName resignFirstResponder];
     }
 }

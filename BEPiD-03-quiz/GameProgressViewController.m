@@ -58,7 +58,7 @@
     }
     
     QuestionState* item = (QuestionState*)[self.game.state objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%d - %@", indexPath.row + 1, item.question.text];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld - %@", indexPath.row + 1, item.question.text];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"R$ %d,00", item.prize];
     
     switch (item.status) {

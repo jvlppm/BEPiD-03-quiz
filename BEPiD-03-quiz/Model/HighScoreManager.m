@@ -46,8 +46,6 @@
     return self;
 }
 
-#define MAX_SCORES 20
-
 - (void) refreshScore {
     [self sortScore];
     if (_data.count > MAX_SCORES)
@@ -88,7 +86,7 @@
 }
 
 - (unsigned long)countScores {
-    NSLog(@"HighScore: %d", _data.count);
+    NSLog(@"HighScore: %lu", (unsigned long)_data.count);
     return _data.count;
 }
 

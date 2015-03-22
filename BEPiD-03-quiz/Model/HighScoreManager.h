@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define MAX_SCORES 20
+
 @class Score;
 
 @interface HighScoreManager : NSObject
