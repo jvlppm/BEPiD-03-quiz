@@ -31,7 +31,10 @@
 - (void)viewWillAppear:(BOOL)animated {
     self.lblAccumulatedPrize.text = [NSString stringWithFormat:@"R$ %d,00", self.game.accumulatedPrize];
     
-    self.lblProgressState.text = [NSString stringWithFormat:@"%lu/%lu", self.game.currentQuestionNumber, self.game.state.count];
+    if (self.game.currentQuestionNumber > self.game.state.count)
+        self.lblProgressState.text = @"Finalizado";
+    else
+        self.lblProgressState.text = [NSString stringWithFormat:@"%lu/%lu", self.game.currentQuestionNumber, self.game.state.count];
 }
 
 #pragma mark - TableView
@@ -55,13 +58,18 @@
     }
     
     QuestionState* item = (QuestionState*)[self.game.state objectAtIndex:indexPath.row];
-    cell.textLabel.text = item.question.text;
+    cell.textLabel.text = [NSString stringWithFormat:@"%lu - %@", indexPath.row + 1, item.question.text];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"R$ %d,00", item.prize];
     
     switch (item.status) {
         case CorrectAnswer:
-        case CorrectWithHelp:
             cell.textLabel.textColor = [UIColor greenColor];
+            break;
+        case CorrectWithHelp:
+            cell.textLabel.textColor = [UIColor colorWithRed:0.3 green:0.8 blue:0.3 alpha:1];
+            break;
+        case WrongAnswer:
+            cell.textLabel.textColor = [UIColor redColor];
             break;
         case WaitingAnswer:
             cell.textLabel.textColor = [UIColor grayColor];

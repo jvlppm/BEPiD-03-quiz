@@ -11,6 +11,7 @@
 typedef enum : NSUInteger {
     Waiting,
     WaitingAnswer,
+    WrongAnswer,
     CorrectAnswer,
     Skip,
     CorrectWithHelp

@@ -12,6 +12,7 @@
 
 @interface GameQuestionViewController () {
     QuestionState* qs;
+    long _selectedRow;
 }
 @property (weak, nonatomic) IBOutlet UILabel *lblQuestion;
 @property (weak, nonatomic) IBOutlet UILabel *lblPrize;
@@ -26,18 +27,43 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [self reload];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void) reload {
     qs = self.game.currentQuestion;
+
+    if (qs) {
+        self.lblQuestion.text = qs.question.text;
+        self.lblPrize.text = [NSString stringWithFormat:@"R$ %d,00", qs.prize];
+    }
     
-    self.lblQuestion.text = qs.question.text;
-    self.lblPrize.text = [NSString stringWithFormat:@"R$ %d,00", qs.prize];
-    
+    _selectedRow = -1;
     [self.tvAnswers reloadData];
+}
+
+- (void) userAnswer: (Answer*) answer number: (NSInteger) number {
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: answer.text
+                                                   message: @"Confirma sua resposta?"
+                                                  delegate: self
+                                         cancelButtonTitle:@"Não"
+                                         otherButtonTitles:@"Sim", nil];
+    
+    alert.tag = number;
+    [alert show];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1)
+    {
+        Answer* answer = [qs.question getAnswer: alertView.tag];
+        [self.game answer:answer];
+        qs = self.game.currentQuestion;
+        NSLog(@"Game status: %lu", self.game.status);
+        [self reload];
+    }
 }
 
 #pragma mark - TableView
@@ -62,6 +88,17 @@
         cell.textLabel.textColor = [UIColor blackColor];
     
     return cell;
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (_selectedRow == indexPath.row) {
+        NSInteger row = indexPath.row;
+        Answer* resp = [qs.question getAnswer:row];
+        [self userAnswer: resp number:row];
+    }
+    
+    _selectedRow = indexPath.row;
+    return indexPath;
 }
 
 /*

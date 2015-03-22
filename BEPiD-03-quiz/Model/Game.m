@@ -20,6 +20,7 @@
     unsigned long _questionIndex;
     BOOL _usedSkip;
     BOOL _usedEliminate;
+    BOOL _usingHelp;
 }
 
 - (instancetype)init {
@@ -56,12 +57,20 @@
 - (void) answer:(Answer *)userAnswer {
     QuestionState* current = self.currentQuestion;
     if ([userAnswer.question correctAnswer: userAnswer]) {
-        current.status = CorrectAnswer;
+        if (!_usingHelp)
+            current.status = CorrectAnswer;
+        else
+            current.status = CorrectWithHelp;
         current.answer = userAnswer;
         _accumulatedPrize += current.prize;
         [self advanceQuestion];
     }
-    _status = Lost;
+    else {
+        current.status = WrongAnswer;
+        _status = Lost;
+    }
+    
+    _usingHelp = NO;
 }
 
 - (SkipStatus) canSkip {
@@ -100,6 +109,7 @@
         [NSException raise:@"Eliminate wrong answers option already used" format:@"This options can only be used once"];
     }
     _usedEliminate = YES;
+    _usingHelp = YES;
     
     QuestionState* current = self.currentQuestion;
     [current.question eliminateWrongAnswers: quantity];
