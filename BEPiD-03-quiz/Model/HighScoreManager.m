@@ -39,14 +39,30 @@
             for (Score* score in array) {
                 [_data addObject:score];
             }
+            
+            [self sortScore];
         }
     }
     return self;
 }
 
+#define MAX_SCORES 20
+
+- (void) refreshScore {
+    [self sortScore];
+    if (_data.count > MAX_SCORES)
+        [_data removeObjectsInRange:NSMakeRange(MAX_SCORES, _data.count - MAX_SCORES)];
+}
+
+- (void) sortScore {
+    NSSortDescriptor *descSort = [NSSortDescriptor sortDescriptorWithKey:@"points" ascending:NO];
+    [_data sortUsingDescriptors:[NSArray arrayWithObject:descSort]];
+}
+
 - (void)saveScore:(Score *)score {
     [_data addObject:score];
     NSData* data = [NSKeyedArchiver archivedDataWithRootObject:_data];
+    [self refreshScore];
     [userDefaults setObject:data forKey:@"highscore"];
     [userDefaults synchronize];
 }
@@ -61,7 +77,18 @@
     return position + 1;
 }
 
-- (unsigned long)count {
+- (NSSet*) playerNames {
+    NSMutableSet* names = [[NSMutableSet alloc] init];
+    
+    for (Score* sc in _data) {
+        if(![names containsObject:sc.name])
+            [names addObject:sc.name];
+    }
+    return names;
+}
+
+- (unsigned long)countScores {
+    NSLog(@"HighScore: %d", _data.count);
     return _data.count;
 }
 

@@ -15,7 +15,8 @@
     self = [super init];
     if (self) {
         _points = 0;
-        _name = @"Anônimo";
+        _name = nil;
+        _result = ResultGaveUp;
     }
     return self;
 }
@@ -39,6 +40,7 @@
         //decode properties, other class vars
         self.points = [[decoder decodeObjectForKey:@"points"] intValue];
         self.name = [decoder decodeObjectForKey:@"name"];
+        self.result = [decoder decodeIntForKey:@"result"];
     }
     return self;
 }
@@ -46,6 +48,7 @@
 - (void)encodeWithCoder:(NSCoder *)encoder {
     [encoder encodeObject: [NSNumber numberWithInt:self.points] forKey:@"points"];
     [encoder encodeObject:self.name forKey:@"name"];
+    [encoder encodeInt:self.result forKey:@"result"];
 }
 
 @end

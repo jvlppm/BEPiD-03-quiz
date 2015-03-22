@@ -12,12 +12,15 @@
 
 @interface HighScoreManager : NSObject
 
+@property (readonly, getter=countScores) unsigned long count;
+
 + (id) sharedInstance;
+
+- (NSSet*) playerNames;
 
 - (int) getPositionFor: (Score*) score;
 - (void) saveScore: (Score*) score;
 
 - (Score*) scoreAt: (unsigned long) index;
-- (unsigned long) count;
 
 @end

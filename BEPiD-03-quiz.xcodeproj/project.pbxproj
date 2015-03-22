@@ -27,6 +27,7 @@
 		E84D47631ABDEDCC0051B3CD /* 475333-announce-128.png in Resources */ = {isa = PBXBuildFile; fileRef = E84D47601ABDEDCC0051B3CD /* 475333-announce-128.png */; };
 		E84D47641ABDEDCC0051B3CD /* modifier-128.png in Resources */ = {isa = PBXBuildFile; fileRef = E84D47611ABDEDCC0051B3CD /* modifier-128.png */; };
 		E8ABE6C51ABF2C5100F4AC7C /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE6C41ABF2C5100F4AC7C /* GameOverViewController.m */; };
+		E8ABE6C81ABF52DB00F4AC7C /* HighScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE6C71ABF52DB00F4AC7C /* HighScoreViewController.m */; };
 		E8FD43591ABE1B0700798D03 /* QuestionState.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD43581ABE1B0700798D03 /* QuestionState.m */; };
 		E8FD435C1ABE275E00798D03 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD435B1ABE275E00798D03 /* GameViewController.m */; };
 		E8FD435F1ABE2A7100798D03 /* GameQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD435E1ABE2A7100798D03 /* GameQuestionViewController.m */; };
@@ -80,6 +81,8 @@
 		E84D47611ABDEDCC0051B3CD /* modifier-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "modifier-128.png"; path = "Images/modifier-128.png"; sourceTree = "<group>"; };
 		E8ABE6C31ABF2C5100F4AC7C /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
 		E8ABE6C41ABF2C5100F4AC7C /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
+		E8ABE6C61ABF52DB00F4AC7C /* HighScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoreViewController.h; sourceTree = "<group>"; };
+		E8ABE6C71ABF52DB00F4AC7C /* HighScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScoreViewController.m; sourceTree = "<group>"; };
 		E8FD43571ABE1B0700798D03 /* QuestionState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionState.h; path = Model/QuestionState.h; sourceTree = "<group>"; };
 		E8FD43581ABE1B0700798D03 /* QuestionState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionState.m; path = Model/QuestionState.m; sourceTree = "<group>"; };
 		E8FD435A1ABE275E00798D03 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 				E8FD43641ABE2AB400798D03 /* GameProgressViewController.m */,
 				E8ABE6C31ABF2C5100F4AC7C /* GameOverViewController.h */,
 				E8ABE6C41ABF2C5100F4AC7C /* GameOverViewController.m */,
+				E8ABE6C61ABF52DB00F4AC7C /* HighScoreViewController.h */,
+				E8ABE6C71ABF52DB00F4AC7C /* HighScoreViewController.m */,
 			);
 			path = "BEPiD-03-quiz";
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				CFE57B241ABA440B008C09C3 /* StudentOpinion.m in Sources */,
 				E8FD435F1ABE2A7100798D03 /* GameQuestionViewController.m in Sources */,
 				E831E99F1AB91F0F005D5635 /* main.m in Sources */,
+				E8ABE6C81ABF52DB00F4AC7C /* HighScoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

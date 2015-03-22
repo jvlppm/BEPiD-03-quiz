@@ -70,6 +70,7 @@
         [self advanceQuestion];
     }
     else {
+        _score.result = ResultLost;
         current.status = WrongAnswer;
         _score.points /= 3;
         _status = Lost;
@@ -129,8 +130,10 @@
         ((QuestionState*)_selectedQuestions[_questionIndex]).status = WaitingAnswer;
         _status = InGame;
     }
-    else
+    else {
         _status = Won;
+        self.score.result = ResultWon;
+    }
 }
 
 - (void) loadQuestions {

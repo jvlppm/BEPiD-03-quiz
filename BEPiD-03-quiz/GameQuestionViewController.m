@@ -101,11 +101,11 @@
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (_selectedRow == indexPath.row) {
+    //if (_selectedRow == indexPath.row) {
         NSInteger row = indexPath.row;
         Answer* resp = [qs.question getAnswer:row];
         [self userAnswer: resp number:row];
-    }
+    //}
     
     _selectedRow = indexPath.row;
     return indexPath;

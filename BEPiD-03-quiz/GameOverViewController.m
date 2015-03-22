@@ -9,6 +9,7 @@
 #import "GameOverViewController.h"
 #import "HighScoreManager.h"
 #import "Score.h"
+#import "HighScoreViewController.h"
 
 @interface GameOverViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lblMessage;
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblWrongAnswerValue;
 @property (weak, nonatomic) IBOutlet UITextField *tfPlayerName;
 @property (weak, nonatomic) IBOutlet UITextField *tfSelectPlayerName;
+@property (weak, nonatomic) IBOutlet UIButton *btnSave;
 
 @end
 
@@ -26,19 +28,25 @@
     HighScoreManager* hs;
     NSArray* players;
     UIView* kbView;
+    CGRect originalFrame;
 }
 
 - (void)viewDidLoad {
     hs = [HighScoreManager sharedInstance];
     
+    originalFrame = self.view.frame;
+    
     //NSArray* topPlayers = [HighScoreManager getTopPlayers];
     
-    char* login = getlogin();
-    NSString *nsLogin = [NSString stringWithUTF8String:login];
-    
     NSMutableArray* playerNames = [[NSMutableArray alloc] init];
-    [playerNames addObject:nsLogin];
+    
     [playerNames addObject:@"Anônimo"];
+    
+    for (NSString* name in [hs playerNames]) {
+        if (name != nil && ![name isEqualToString:@"Anônimo"])
+            [playerNames addObject:name];
+    }
+    
     [playerNames addObject:@"Digitar nome"];
     
     players = playerNames;
@@ -49,6 +57,9 @@
         kbView = self.tfSelectPlayerName.inputView;
         self.tfSelectPlayerName.inputView = picker;
     }
+    
+    self.tfSelectPlayerName.text =
+    self.tfPlayerName.text = players[0];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -89,6 +100,19 @@
     self.navigationItem.leftBarButtonItem = item;
 }
 
+- (IBAction)save:(id)sender {
+    self.game.score.name = self.tfPlayerName.text;
+    [hs saveScore:self.game.score];
+    self.btnSave.enabled = NO;
+    [self showHighscore];
+}
+
+- (void) showHighscore {
+    HighScoreViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"highscore"];
+    [vc backToRoot];
+    [self showViewController:vc sender:self];
+}
+
 #pragma mark - Picker View
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
@@ -112,15 +136,31 @@
         [self.tfPlayerName becomeFirstResponder];
     }
     else {
-        self.tfSelectPlayerName.text =
-        self.tfPlayerName.text = players[row];
+        if (row == 0) {
+            self.tfSelectPlayerName.text =
+            self.tfPlayerName.text = nil;
+        }
+        else {
+            self.tfSelectPlayerName.text =
+            self.tfPlayerName.text = players[row];
+        }
         [self.tfSelectPlayerName resignFirstResponder];
     }
 }
 
+
+#pragma mark Text Field Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    if (self.tfPlayerName.text.length <= 0)
+        self.tfSelectPlayerName.hidden = NO;
+    return NO;
+}
+
 #pragma mark Track Keyboard
 
-#define kOFFSET_FOR_KEYBOARD 180.0
+#define kOFFSET_FOR_KEYBOARD 120.0
 
 - (void) trackKeyboard {
     // register for keyboard notifications
@@ -147,38 +187,11 @@
 }
 
 -(void)keyboardWillShow {
-    // Animate the current view out of the way
-    if (self.view.frame.origin.y >= 0)
-    {
-        [self setViewMovedUp:YES];
-    }
-    else if (self.view.frame.origin.y < 0)
-    {
-        [self setViewMovedUp:NO];
-    }
+    [self setViewMovedUp:YES];
 }
 
 -(void)keyboardWillHide {
-    if (self.view.frame.origin.y >= 0)
-    {
-        [self setViewMovedUp:YES];
-    }
-    else if (self.view.frame.origin.y < 0)
-    {
-        [self setViewMovedUp:NO];
-    }
-}
-
--(void)textFieldDidBeginEditing:(UITextField *)sender
-{
-    if ([sender isEqual:self.tfPlayerName] || [sender isEqual:self.tfSelectPlayerName])
-    {
-        //move the main view, so that the keyboard does not hide it.
-        if  (self.view.frame.origin.y >= 0)
-        {
-            [self setViewMovedUp:YES];
-        }
-    }
+    [self setViewMovedUp:NO];
 }
 
 //method to move the view up/down whenever the keyboard is shown/dismissed
@@ -187,19 +200,11 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3]; // if you want to slide up the view
     
-    CGRect rect = self.view.frame;
+    CGRect rect = originalFrame;
     if (movedUp)
     {
-        // 1. move the view's origin up so that the text field that will be hidden come above the keyboard
-        // 2. increase the size of the view so that the area behind the keyboard is covered up.
         rect.origin.y -= kOFFSET_FOR_KEYBOARD;
         rect.size.height += kOFFSET_FOR_KEYBOARD;
-    }
-    else
-    {
-        // revert back to the normal state.
-        rect.origin.y += kOFFSET_FOR_KEYBOARD;
-        rect.size.height -= kOFFSET_FOR_KEYBOARD;
     }
     self.view.frame = rect;
     
@@ -207,13 +212,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

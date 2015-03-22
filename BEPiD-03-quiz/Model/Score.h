@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum : NSUInteger {
+    ResultGaveUp,
+    ResultLost,
+    ResultWon,
+} GameResult;
+
 @interface Score : NSObject
 
 + (Score*) scoreFor: (NSString*) name withPoints: (int) points;
@@ -18,5 +24,6 @@
 
 @property int points;
 @property NSString* name;
+@property GameResult result;
 
 @end
