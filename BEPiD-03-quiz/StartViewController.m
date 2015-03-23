@@ -12,6 +12,8 @@
 #import "HighScoreManager.h"
 #import "Score.h"
 #import "GameViewController.h"
+#import "TableViewController.h"
+#import "HighScoreController.h"
 
 @interface StartViewController () {
     Game* lastGame;
@@ -47,6 +49,10 @@
     for (GameViewController* gameController in vc.viewControllers) {
         gameController.game = lastGame;
     }
+}
+
+- (IBAction)showHighscore:(id)sender {
+    [HighScoreController showViewReseting:NO fromController:self];
 }
 
 @end

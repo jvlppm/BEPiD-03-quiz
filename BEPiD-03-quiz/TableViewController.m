@@ -9,7 +9,9 @@
 #import "TableViewController.h"
 #import "UINavigationController+Fade.h"
 
-@interface TableViewController ()
+@interface TableViewController () {
+    BOOL _popToRoot;
+}
 
 @property (weak, nonatomic) IBOutlet UIImageView *ivImage;
 @property (weak, nonatomic) IBOutlet UITableView *tvTable;
@@ -23,7 +25,14 @@
 }
 
 - (void) back {
-    [self.navigationController fadePopViewController];
+    if (!_popToRoot)
+        [self.navigationController fadePopViewController];
+    else
+        [self.navigationController fadePopToRootViewController];
+}
+
+- (void) setBackToRoot: (BOOL) backToRoot {
+    _popToRoot = backToRoot;
 }
 
 - (void) updateNavigation {

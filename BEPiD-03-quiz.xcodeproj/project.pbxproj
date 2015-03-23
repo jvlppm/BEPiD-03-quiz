@@ -26,7 +26,7 @@
 		E84D47631ABDEDCC0051B3CD /* 475333-announce-128.png in Resources */ = {isa = PBXBuildFile; fileRef = E84D47601ABDEDCC0051B3CD /* 475333-announce-128.png */; };
 		E84D47641ABDEDCC0051B3CD /* modifier-128.png in Resources */ = {isa = PBXBuildFile; fileRef = E84D47611ABDEDCC0051B3CD /* modifier-128.png */; };
 		E8ABE6C51ABF2C5100F4AC7C /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE6C41ABF2C5100F4AC7C /* GameOverViewController.m */; };
-		E8ABE6C81ABF52DB00F4AC7C /* HighScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE6C71ABF52DB00F4AC7C /* HighScoreViewController.m */; };
+		E8ABE6C81ABF52DB00F4AC7C /* HighScoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE6C71ABF52DB00F4AC7C /* HighScoreController.m */; };
 		E8ABE6E51ABF652200F4AC7C /* Question1.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6C91ABF652200F4AC7C /* Question1.json */; };
 		E8ABE6E61ABF652200F4AC7C /* Question2.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6CA1ABF652200F4AC7C /* Question2.json */; };
 		E8ABE6E71ABF652200F4AC7C /* Question3.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6CB1ABF652200F4AC7C /* Question3.json */; };
@@ -112,8 +112,8 @@
 		E84D47611ABDEDCC0051B3CD /* modifier-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "modifier-128.png"; path = "Images/modifier-128.png"; sourceTree = "<group>"; };
 		E8ABE6C31ABF2C5100F4AC7C /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
 		E8ABE6C41ABF2C5100F4AC7C /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
-		E8ABE6C61ABF52DB00F4AC7C /* HighScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoreViewController.h; sourceTree = "<group>"; };
-		E8ABE6C71ABF52DB00F4AC7C /* HighScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScoreViewController.m; sourceTree = "<group>"; };
+		E8ABE6C61ABF52DB00F4AC7C /* HighScoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoreController.h; sourceTree = "<group>"; };
+		E8ABE6C71ABF52DB00F4AC7C /* HighScoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScoreController.m; sourceTree = "<group>"; };
 		E8ABE6C91ABF652200F4AC7C /* Question1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question1.json; path = Data/Question1.json; sourceTree = "<group>"; };
 		E8ABE6CA1ABF652200F4AC7C /* Question2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question2.json; path = Data/Question2.json; sourceTree = "<group>"; };
 		E8ABE6CB1ABF652200F4AC7C /* Question3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question3.json; path = Data/Question3.json; sourceTree = "<group>"; };
@@ -297,8 +297,8 @@
 				E8FD43641ABE2AB400798D03 /* GameProgressViewController.m */,
 				E8ABE6C31ABF2C5100F4AC7C /* GameOverViewController.h */,
 				E8ABE6C41ABF2C5100F4AC7C /* GameOverViewController.m */,
-				E8ABE6C61ABF52DB00F4AC7C /* HighScoreViewController.h */,
-				E8ABE6C71ABF52DB00F4AC7C /* HighScoreViewController.m */,
+				E8ABE6C61ABF52DB00F4AC7C /* HighScoreController.h */,
+				E8ABE6C71ABF52DB00F4AC7C /* HighScoreController.m */,
 				E8ABE7041ABF855800F4AC7C /* TableViewController.h */,
 				E8ABE7051ABF855800F4AC7C /* TableViewController.m */,
 			);
@@ -495,7 +495,7 @@
 				CFE57B241ABA440B008C09C3 /* StudentOpinion.m in Sources */,
 				E8FD435F1ABE2A7100798D03 /* GameQuestionViewController.m in Sources */,
 				E831E99F1AB91F0F005D5635 /* main.m in Sources */,
-				E8ABE6C81ABF52DB00F4AC7C /* HighScoreViewController.m in Sources */,
+				E8ABE6C81ABF52DB00F4AC7C /* HighScoreController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

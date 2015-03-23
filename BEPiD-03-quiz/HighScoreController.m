@@ -6,39 +6,38 @@
 //  Copyright (c) 2015 João Vitor. All rights reserved.
 //
 
-#import "HighScoreViewController.h"
+#import "HighScoreController.h"
 #import "HighScoreManager.h"
 #import "Score.h"
 #import "UINavigationController+Fade.h"
+#import "UIView_Blur.h"
 
-@interface HighScoreViewController () {
+@interface HighScoreController () {
     HighScoreManager* hs;
 }
 
-@property (weak, nonatomic) IBOutlet UIImageView *ivImage;
-
 @end
 
-@implementation HighScoreViewController
+@implementation HighScoreController
 
-- (void) setBackToRoot {
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(backToRoot)];
-    self.navigationItem.hidesBackButton = YES;
-    self.navigationItem.leftBarButtonItem = item;
++ (void)showViewReseting:(BOOL)backToRoot fromController:(UIViewController *)fromVC {
+    TableViewController* vc = [fromVC.storyboard instantiateViewControllerWithIdentifier:@"table_view"];
+    vc.bgImage = [fromVC.view blur: 24];
+    HighScoreController* dataAndDelegate = [[HighScoreController alloc] init];
+    vc.delegate = dataAndDelegate;
+    vc.dataSource = dataAndDelegate;
+    [vc setBackToRoot:backToRoot];
+    [fromVC.navigationController pushFadeViewController:vc];
 }
 
 
-- (void) backToRoot {
-    [self.navigationController fadePopToRootViewController];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    hs = [HighScoreManager sharedInstance];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    self.ivImage.image = self.bgImage;
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        hs = [HighScoreManager sharedInstance];
+    }
+    return self;
 }
 
 #pragma mark - TableView

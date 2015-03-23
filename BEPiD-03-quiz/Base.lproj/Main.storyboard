@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pwf-ha-1Ys">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pwf-ha-1Ys">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -42,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SwK-5b-im4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="-323"/>
+            <point key="canvasLocation" x="1030" y="-343"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -74,7 +74,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ese-Dw-vRy" kind="show" identifier="high_score" id="ktB-uh-uXh"/>
+                                            <action selector="showHighscore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Twk-ut-EJh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-JY-hN2">
@@ -710,51 +710,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bic-kZ-H1W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1789" y="370"/>
-        </scene>
-        <!--High Score-->
-        <scene sceneID="kXO-pO-ei7">
-            <objects>
-                <viewController storyboardIdentifier="highscore" title="High Score" id="ese-Dw-vRy" customClass="HighScoreViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vFN-6m-idR"/>
-                        <viewControllerLayoutGuide type="bottom" id="rlg-9p-CqP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VQt-sH-8Kx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jph-RX-C2Q">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="l2j-pg-AGl">
-                                <rect key="frame" x="16" y="72" width="568" height="508"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="ese-Dw-vRy" id="ArI-bm-Hfy"/>
-                                    <outlet property="delegate" destination="ese-Dw-vRy" id="cMl-w9-c5Q"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="Jph-RX-C2Q" secondAttribute="centerY" id="4WP-eC-CYw"/>
-                            <constraint firstItem="Jph-RX-C2Q" firstAttribute="height" secondItem="VQt-sH-8Kx" secondAttribute="height" id="60C-tb-8MQ"/>
-                            <constraint firstItem="l2j-pg-AGl" firstAttribute="top" secondItem="vFN-6m-idR" secondAttribute="bottom" constant="8" id="CL2-yD-UPc"/>
-                            <constraint firstItem="rlg-9p-CqP" firstAttribute="top" secondItem="l2j-pg-AGl" secondAttribute="bottom" constant="20" id="QrN-hT-Dz5"/>
-                            <constraint firstAttribute="centerX" secondItem="Jph-RX-C2Q" secondAttribute="centerX" id="Zb6-sh-lP3"/>
-                            <constraint firstItem="l2j-pg-AGl" firstAttribute="leading" secondItem="VQt-sH-8Kx" secondAttribute="leadingMargin" id="b5G-b4-Q9n"/>
-                            <constraint firstItem="Jph-RX-C2Q" firstAttribute="width" secondItem="VQt-sH-8Kx" secondAttribute="width" id="j5J-49-vRq"/>
-                            <constraint firstItem="l2j-pg-AGl" firstAttribute="trailing" secondItem="VQt-sH-8Kx" secondAttribute="trailingMargin" id="tC5-Q9-Jo1"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="ivImage" destination="Jph-RX-C2Q" id="deR-jE-URz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dPt-As-IjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1112" y="1162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Kq-4z-PnS">

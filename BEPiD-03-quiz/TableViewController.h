@@ -12,6 +12,8 @@
 
 @property (nonatomic) UIImage* bgImage;
 
+- (void) setBackToRoot: (BOOL) backToRoot;
+
 @property id<UITableViewDataSource> dataSource;
 @property id<UITableViewDelegate> delegate;
 

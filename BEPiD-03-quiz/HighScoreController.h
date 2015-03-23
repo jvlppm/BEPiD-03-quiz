@@ -9,11 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "TableViewController.h"
 
-@interface HighScoreViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface HighScoreController : NSObject<UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic) UIImage* bgImage;
++ (void) showViewReseting: (BOOL) backToRoot fromController: (UIViewController*) fromVC;
+
 @property int markScore;
-
-- (void) setBackToRoot;
 
 @end

@@ -9,9 +9,10 @@
 #import "GameOverViewController.h"
 #import "HighScoreManager.h"
 #import "Score.h"
-#import "HighScoreViewController.h"
+#import "HighScoreController.h"
 #import "UIView_Blur.h"
 #import "UINavigationController+Fade.h"
+#import "TableViewController.h"
 
 @interface GameOverViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lblMessage;
@@ -127,11 +128,7 @@
 }
 
 - (void) showHighscore: (int) index {
-    HighScoreViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"highscore"];
-    vc.bgImage = [self.view blur: 24];
-    vc.markScore = index;
-    [vc setBackToRoot];
-    [self.navigationController pushFadeViewController:vc];
+    [HighScoreController showViewReseting:YES fromController:self];
 }
 
 #pragma mark - Picker View
