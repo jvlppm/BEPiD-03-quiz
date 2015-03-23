@@ -78,7 +78,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.080000000000000002" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="4W7-N6-LYT" firstAttribute="top" secondItem="RYQ-gI-bm1" secondAttribute="top" constant="20" id="2gf-Qd-ZkK"/>
                                     <constraint firstAttribute="centerX" secondItem="W1o-1Q-ikm" secondAttribute="centerX" id="Lo5-SV-khk"/>
@@ -112,9 +112,14 @@
                                     <constraint firstItem="8Jj-cC-u1h" firstAttribute="top" secondItem="p5L-6G-g3D" secondAttribute="top" id="kiw-gK-vD4"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Cw-NV-WKE">
+                                <rect key="frame" x="0.0" y="480" width="600" height="120"/>
+                                <color key="backgroundColor" red="0.023529414087533951" green="0.027450982481241226" blue="0.98823535442352295" alpha="0.029999999999999999" colorSpace="deviceRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7Cw-NV-WKE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="01v-CI-anh"/>
                             <constraint firstItem="p5L-6G-g3D" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="0wa-jD-O3v"/>
                             <constraint firstItem="RYQ-gI-bm1" firstAttribute="top" secondItem="p5L-6G-g3D" secondAttribute="bottom" id="5L2-3i-Qej"/>
                             <constraint firstItem="p5L-6G-g3D" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="64" id="67b-Sq-Gwi"/>
@@ -122,7 +127,10 @@
                             <constraint firstItem="p5L-6G-g3D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="MoV-Qt-3WC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RYQ-gI-bm1" secondAttribute="bottom" id="UKi-ed-BYU"/>
                             <constraint firstAttribute="width" secondItem="RYQ-gI-bm1" secondAttribute="width" id="ZhR-iq-2NZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Cw-NV-WKE" secondAttribute="bottom" id="cLm-wh-Qqv"/>
+                            <constraint firstItem="7Cw-NV-WKE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="cuV-WN-sEW"/>
                             <constraint firstItem="RYQ-gI-bm1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="q71-Zf-PPe"/>
+                            <constraint firstItem="7Cw-NV-WKE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="t0u-3J-hZt"/>
                             <constraint firstItem="p5L-6G-g3D" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="xwh-0c-Ggz"/>
                         </constraints>
                     </view>
