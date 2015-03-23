@@ -22,6 +22,7 @@ typedef enum : NSUInteger {
 - (void)encodeWithCoder: (NSCoder*) encoder;
 - (id) initWithCoder: (NSCoder*) decoder;
 
+@property int key;
 @property int points;
 @property NSString* name;
 @property GameResult result;

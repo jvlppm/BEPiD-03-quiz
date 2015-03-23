@@ -13,20 +13,11 @@
 @interface GameProgressViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lblProgressState;
 @property (weak, nonatomic) IBOutlet UILabel *lblAccumulatedPrize;
+@property (weak, nonatomic) IBOutlet UITableView *tvProgress;
 
 @end
 
 @implementation GameProgressViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (void)viewWillAppear:(BOOL)animated {
     self.lblAccumulatedPrize.text = [NSString stringWithFormat:@"R$ %d,00", self.game.accumulatedPrize];
@@ -35,6 +26,8 @@
         self.lblProgressState.text = @"Finalizado";
     else
         self.lblProgressState.text = [NSString stringWithFormat:@"%lu/%lu", self.game.currentQuestionNumber, (unsigned long)self.game.state.count];
+    
+    [self.tvProgress reloadData];
 }
 
 #pragma mark - TableView
@@ -87,15 +80,5 @@
     
     return cell;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

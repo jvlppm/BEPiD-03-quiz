@@ -12,6 +12,7 @@
 @interface HighScoreViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) UIImage* bgImage;
+@property int markScore;
 
 - (void) setBackToRoot;
 

@@ -17,6 +17,8 @@
         _points = 0;
         _name = nil;
         _result = ResultGaveUp;
+        _key = arc4random();
+
     }
     return self;
 }
@@ -31,6 +33,7 @@
     if (self) {
         _name = name;
         _points = points;
+        _key = arc4random();
     }
     return self;
 }
@@ -41,6 +44,7 @@
         self.points = [[decoder decodeObjectForKey:@"points"] intValue];
         self.name = [decoder decodeObjectForKey:@"name"];
         self.result = [decoder decodeIntForKey:@"result"];
+        self.key = [decoder decodeIntForKey:@"key"];
     }
     return self;
 }
@@ -49,6 +53,7 @@
     [encoder encodeObject: [NSNumber numberWithInt:self.points] forKey:@"points"];
     [encoder encodeObject:self.name forKey:@"name"];
     [encoder encodeInt:self.result forKey:@"result"];
+    [encoder encodeInt:self.key forKey:@"key"];
 }
 
 @end

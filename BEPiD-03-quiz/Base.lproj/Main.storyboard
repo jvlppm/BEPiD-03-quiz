@@ -77,24 +77,13 @@
                                             <segue destination="ese-Dw-vRy" kind="show" id="ktB-uh-uXh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wc-bT-RcM">
-                                        <rect key="frame" x="280" y="120" width="41" height="30"/>
-                                        <state key="normal" title="Sobre">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="XEY-Lu-b8h" kind="show" id="abI-wA-wd9"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="4W7-N6-LYT" firstAttribute="top" secondItem="RYQ-gI-bm1" secondAttribute="top" constant="20" id="2gf-Qd-ZkK"/>
                                     <constraint firstAttribute="centerX" secondItem="W1o-1Q-ikm" secondAttribute="centerX" id="Lo5-SV-khk"/>
                                     <constraint firstItem="W1o-1Q-ikm" firstAttribute="top" secondItem="4W7-N6-LYT" secondAttribute="bottom" constant="20" id="MHQ-I2-guO"/>
-                                    <constraint firstItem="4wc-bT-RcM" firstAttribute="top" secondItem="W1o-1Q-ikm" secondAttribute="bottom" constant="20" id="QHx-J4-b67"/>
                                     <constraint firstAttribute="centerX" secondItem="4W7-N6-LYT" secondAttribute="centerX" id="avi-nG-0h3"/>
-                                    <constraint firstAttribute="centerX" secondItem="4wc-bT-RcM" secondAttribute="centerX" id="rIk-4e-AHT"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5L-6G-g3D">
@@ -371,6 +360,7 @@
                     <connections>
                         <outlet property="lblAccumulatedPrize" destination="z6x-7c-vqt" id="Aco-OT-sCi"/>
                         <outlet property="lblProgressState" destination="cJS-mq-FU4" id="Ybg-8Y-Uxx"/>
+                        <outlet property="tvProgress" destination="Fyp-0S-tPJ" id="l0A-Jw-idv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGQ-2R-BfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -430,9 +420,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1000,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6J-VK-AZG">
-                                                <rect key="frame" x="334" y="37" width="88" height="21"/>
+                                                <rect key="frame" x="135" y="37" width="287" height="21"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="88" id="iXG-LF-SHv"/>
+                                                    <constraint firstAttribute="width" constant="287" id="iXG-LF-SHv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>

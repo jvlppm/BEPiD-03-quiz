@@ -59,6 +59,7 @@
 		E8ABE7061ABF855800F4AC7C /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE7051ABF855800F4AC7C /* TableViewController.m */; };
 		E8ABE7091ABF8D4500F4AC7C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE7081ABF8D4500F4AC7C /* UIImage+ImageEffects.m */; };
 		E8ABE70C1ABF92AE00F4AC7C /* UINavigationController+Fade.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE70B1ABF92AE00F4AC7C /* UINavigationController+Fade.m */; };
+		E8ABE70E1ABFB26D00F4AC7C /* tray-online.png in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE70D1ABFB26D00F4AC7C /* tray-online.png */; };
 		E8FD43591ABE1B0700798D03 /* QuestionState.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD43581ABE1B0700798D03 /* QuestionState.m */; };
 		E8FD435C1ABE275E00798D03 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD435B1ABE275E00798D03 /* GameViewController.m */; };
 		E8FD435F1ABE2A7100798D03 /* GameQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD435E1ABE2A7100798D03 /* GameQuestionViewController.m */; };
@@ -149,6 +150,7 @@
 		E8ABE7081ABF8D4500F4AC7C /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "Extensions/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		E8ABE70A1ABF92AE00F4AC7C /* UINavigationController+Fade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Fade.h"; path = "Extensions/UINavigationController+Fade.h"; sourceTree = "<group>"; };
 		E8ABE70B1ABF92AE00F4AC7C /* UINavigationController+Fade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Fade.m"; path = "Extensions/UINavigationController+Fade.m"; sourceTree = "<group>"; };
+		E8ABE70D1ABFB26D00F4AC7C /* tray-online.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tray-online.png"; path = "Images/tray-online.png"; sourceTree = "<group>"; };
 		E8FD43571ABE1B0700798D03 /* QuestionState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionState.h; path = Model/QuestionState.h; sourceTree = "<group>"; };
 		E8FD43581ABE1B0700798D03 /* QuestionState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionState.m; path = Model/QuestionState.m; sourceTree = "<group>"; };
 		E8FD435A1ABE275E00798D03 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 		E84D47651ABDEDD10051B3CD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E8ABE70D1ABFB26D00F4AC7C /* tray-online.png */,
 				E84D475F1ABDEDCC0051B3CD /* 475332-flag-128.png */,
 				E84D47601ABDEDCC0051B3CD /* 475333-announce-128.png */,
 				E84D47611ABDEDCC0051B3CD /* modifier-128.png */,
@@ -427,6 +430,7 @@
 				E8ABE6F01ABF652200F4AC7C /* Question12.json in Resources */,
 				E8ABE6FE1ABF652200F4AC7C /* Question26.json in Resources */,
 				E831E9A81AB91F10005D5635 /* Main.storyboard in Resources */,
+				E8ABE70E1ABFB26D00F4AC7C /* tray-online.png in Resources */,
 				E84D47621ABDEDCC0051B3CD /* 475332-flag-128.png in Resources */,
 				E8ABE6EA1ABF652200F4AC7C /* Question6.json in Resources */,
 				E8ABE6EC1ABF652200F4AC7C /* Question8.json in Resources */,

@@ -123,12 +123,13 @@
     self.game.score.name = self.tfPlayerName.text;
     [hs saveScore:self.game.score];
     self.btnSave.enabled = NO;
-    [self showHighscore];
+    [self showHighscore: self.game.score.key];
 }
 
-- (void) showHighscore {
+- (void) showHighscore: (int) index {
     HighScoreViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"highscore"];
-    vc.bgImage = [self.view blur: 32];
+    vc.bgImage = [self.view blur: 24];
+    vc.markScore = index;
     [vc setBackToRoot];
     [self.navigationController pushFadeViewController:vc];
 }

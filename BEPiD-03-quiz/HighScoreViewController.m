@@ -65,6 +65,10 @@
         cell.textLabel.text = item.name;
     else
         cell.textLabel.text = @"Anônimo";
+    
+    if(item.key == self.markScore) {
+        cell.backgroundColor = [UIColor colorWithRed:0xf9/255.0 green:0xf1/255.0 blue:0x98/255.0 alpha:0.5];
+    }
 
     cell.detailTextLabel.text = [NSString stringWithFormat:@"R$ %d,00", item.points];
     
