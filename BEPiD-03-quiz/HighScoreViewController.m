@@ -9,29 +9,36 @@
 #import "HighScoreViewController.h"
 #import "HighScoreManager.h"
 #import "Score.h"
+#import "UINavigationController+Fade.h"
 
 @interface HighScoreViewController () {
     HighScoreManager* hs;
 }
 
+@property (weak, nonatomic) IBOutlet UIImageView *ivImage;
+
 @end
 
 @implementation HighScoreViewController
 
-- (void) backToRoot {
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+- (void) setBackToRoot {
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(backToRoot)];
     self.navigationItem.hidesBackButton = YES;
     self.navigationItem.leftBarButtonItem = item;
 }
 
 
-- (void) back {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+- (void) backToRoot {
+    [self.navigationController fadePopToRootViewController];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     hs = [HighScoreManager sharedInstance];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.ivImage.image = self.bgImage;
 }
 
 #pragma mark - TableView
@@ -49,7 +56,8 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"progressCell"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+        cell.backgroundColor = nil;
     }
     
     Score* item = [hs scoreAt:indexPath.row];
@@ -72,7 +80,7 @@
             break;
     }
     
-    cell.detailTextLabel.textColor = [UIColor lightGrayColor];
+    cell.detailTextLabel.textColor = [UIColor grayColor];
     
     return cell;
 }

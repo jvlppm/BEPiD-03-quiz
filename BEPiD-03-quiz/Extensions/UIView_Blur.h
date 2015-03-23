@@ -11,6 +11,6 @@
 
 @interface UIView(Blur)
 
-- (UIImage*) blur;
+- (UIImage*) blur: (int) radius;
 
 @end

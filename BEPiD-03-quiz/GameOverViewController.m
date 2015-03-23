@@ -10,6 +10,8 @@
 #import "HighScoreManager.h"
 #import "Score.h"
 #import "HighScoreViewController.h"
+#import "UIView_Blur.h"
+#import "UINavigationController+Fade.h"
 
 @interface GameOverViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lblMessage;
@@ -126,8 +128,9 @@
 
 - (void) showHighscore {
     HighScoreViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"highscore"];
-    [vc backToRoot];
-    [self showViewController:vc sender:self];
+    vc.bgImage = [self.view blur: 32];
+    [vc setBackToRoot];
+    [self.navigationController pushFadeViewController:vc];
 }
 
 #pragma mark - Picker View
@@ -222,15 +225,5 @@
     
     [UIView commitAnimations];
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

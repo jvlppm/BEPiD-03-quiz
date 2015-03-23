@@ -31,4 +31,14 @@
     [self popViewControllerAnimated:NO];
 }
 
+- (void)fadePopToRootViewController
+{
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type = kCATransitionFade;
+    [self.view.layer addAnimation:transition forKey:nil];
+    [self popToRootViewControllerAnimated:NO];
+}
+
 @end

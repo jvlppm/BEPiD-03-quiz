@@ -729,9 +729,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="l2j-pg-AGl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jph-RX-C2Q">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="l2j-pg-AGl">
                                 <rect key="frame" x="16" y="72" width="568" height="508"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ese-Dw-vRy" id="ArI-bm-Hfy"/>
                                     <outlet property="delegate" destination="ese-Dw-vRy" id="cMl-w9-c5Q"/>
@@ -740,12 +744,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Jph-RX-C2Q" secondAttribute="centerY" id="4WP-eC-CYw"/>
+                            <constraint firstItem="Jph-RX-C2Q" firstAttribute="height" secondItem="VQt-sH-8Kx" secondAttribute="height" id="60C-tb-8MQ"/>
                             <constraint firstItem="l2j-pg-AGl" firstAttribute="top" secondItem="vFN-6m-idR" secondAttribute="bottom" constant="8" id="CL2-yD-UPc"/>
                             <constraint firstItem="rlg-9p-CqP" firstAttribute="top" secondItem="l2j-pg-AGl" secondAttribute="bottom" constant="20" id="QrN-hT-Dz5"/>
+                            <constraint firstAttribute="centerX" secondItem="Jph-RX-C2Q" secondAttribute="centerX" id="Zb6-sh-lP3"/>
                             <constraint firstItem="l2j-pg-AGl" firstAttribute="leading" secondItem="VQt-sH-8Kx" secondAttribute="leadingMargin" id="b5G-b4-Q9n"/>
+                            <constraint firstItem="Jph-RX-C2Q" firstAttribute="width" secondItem="VQt-sH-8Kx" secondAttribute="width" id="j5J-49-vRq"/>
                             <constraint firstItem="l2j-pg-AGl" firstAttribute="trailing" secondItem="VQt-sH-8Kx" secondAttribute="trailingMargin" id="tC5-Q9-Jo1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ivImage" destination="Jph-RX-C2Q" id="deR-jE-URz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPt-As-IjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -66,7 +66,7 @@
 
 - (IBAction)helpFromStudents:(id)sender {
     TableViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"table_view"];
-    vc.bgImage = [self.view blur];
+    vc.bgImage = [self.view blur: 12];
     vc.delegate = self;
     vc.dataSource = self;
     

@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TableViewController.h"
 
 @interface HighScoreViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
-- (void) backToRoot;
+@property (nonatomic) UIImage* bgImage;
+
+- (void) setBackToRoot;
 
 @end

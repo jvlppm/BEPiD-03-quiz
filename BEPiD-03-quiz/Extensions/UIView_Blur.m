@@ -10,13 +10,13 @@
 
 @implementation UIView(Blur)
 
-- (UIImage *)blur {
+- (UIImage *)blur: (int) radius {
     UIGraphicsBeginImageContext(self.bounds.size);
     [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    return [image applyBlurWithRadius: 12 tintColor: [UIColor colorWithWhite:1.0 alpha:0.2] saturationDeltaFactor: 1.3 maskImage: nil];
+    return [image applyBlurWithRadius: radius tintColor: [UIColor colorWithWhite:1.0 alpha:0.2] saturationDeltaFactor: 1.3 maskImage: nil];
 }
 
 @end

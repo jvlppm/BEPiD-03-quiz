@@ -12,5 +12,6 @@
 
 - (void)pushFadeViewController:(UIViewController *)viewController;
 - (void)fadePopViewController;
+- (void) fadePopToRootViewController;
 
 @end
