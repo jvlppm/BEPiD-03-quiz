@@ -689,24 +689,6 @@
             </objects>
             <point key="canvasLocation" x="1789" y="370"/>
         </scene>
-        <!--Sobre-->
-        <scene sceneID="1mS-Y0-nS2">
-            <objects>
-                <viewController title="Sobre" id="XEY-Lu-b8h" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="THH-3t-QGs"/>
-                        <viewControllerLayoutGuide type="bottom" id="GUd-lQ-Pva"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pTP-cP-rFd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fSt-3V-cK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1789" y="1162"/>
-        </scene>
         <!--High Score-->
         <scene sceneID="kXO-pO-ei7">
             <objects>
