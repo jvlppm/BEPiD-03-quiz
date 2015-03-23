@@ -11,22 +11,22 @@
     "universitários": [
         {
             "curso": "matematica",
-            "resposta": 0,
-            "certeza": 0.9
+            "resposta": 3,
+            "certeza": 1
         },
         {
             "curso": "artes",
-            "resposta": 0,
+            "resposta": 3,
             "certeza": 0.9
         },
 		{
             "curso": "medicina",
-            "resposta":0,
-            "certeza": 0.9
+            "resposta":3,
+            "certeza": 1
         },
 		{
             "curso": "geografia",
-            "resposta":0,
+            "resposta":3,
             "certeza": 0.95
         }
     ],

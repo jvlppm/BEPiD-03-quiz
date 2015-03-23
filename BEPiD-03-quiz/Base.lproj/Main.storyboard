@@ -6,6 +6,44 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="dtR-8c-vWc">
+            <objects>
+                <viewController storyboardIdentifier="table_view" id="OJW-HR-HoY" customClass="TableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fbg-Lx-1HC"/>
+                        <viewControllerLayoutGuide type="bottom" id="ePc-Zo-5De"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S3E-pK-36T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VTz-Vz-YA9">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tyF-pQ-wvF">
+                                <rect key="frame" x="16" y="20" width="568" height="560"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="VTz-Vz-YA9" secondAttribute="trailing" constant="-16" id="5VI-R6-HZf"/>
+                            <constraint firstItem="VTz-Vz-YA9" firstAttribute="top" secondItem="S3E-pK-36T" secondAttribute="topMargin" id="GxK-m1-Jw3"/>
+                            <constraint firstItem="ePc-Zo-5De" firstAttribute="top" secondItem="VTz-Vz-YA9" secondAttribute="bottom" id="XSZ-et-LCN"/>
+                            <constraint firstItem="VTz-Vz-YA9" firstAttribute="leading" secondItem="S3E-pK-36T" secondAttribute="leadingMargin" constant="-16" id="n0E-ZZ-7pi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ivImage" destination="VTz-Vz-YA9" id="qpE-vF-jlk"/>
+                        <outlet property="tvTable" destination="tyF-pQ-wvF" id="Ejk-lF-cFc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SwK-5b-im4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112" y="-323"/>
+        </scene>
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>

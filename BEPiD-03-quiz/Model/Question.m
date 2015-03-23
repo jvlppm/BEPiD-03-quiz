@@ -13,7 +13,7 @@
 
 @implementation Question {
     NSMutableArray* _answers;
-    NSMutableDictionary* _collegeStudents;
+    NSMutableArray* _collegeStudents;
     Answer* _correctAnswer;
 }
 
@@ -25,7 +25,7 @@
 {
     self = [super init];
     if (self) {
-        _collegeStudents = [[NSMutableDictionary alloc] init];
+        _collegeStudents = [[NSMutableArray alloc] init];
         _answers = [[NSMutableArray alloc] init];
     }
     return self;
@@ -43,12 +43,12 @@
 
         _difficulty = [data[@"dificuldade"] intValue];
 
-        for (NSDictionary* studentData in data[@"universitarios"]) {
+        for (NSDictionary* studentData in data[@"universitários"]) {
             unsigned int studentAnswerIndex = [studentData[@"resposta"] unsignedIntValue];
             StudentOpinion* opinion = [StudentOpinion opinionFromStudent: studentData[@"curso"]
                                                       toAnswer: [self getAnswer: studentAnswerIndex]
                                                       withCertainty: [studentData[@"certeza"] floatValue]];
-            [_collegeStudents setObject:opinion forKey:opinion.course];
+            [_collegeStudents addObject:opinion];
         }
     }
     return self;

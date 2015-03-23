@@ -55,6 +55,10 @@
 		E8ABE6FE1ABF652200F4AC7C /* Question26.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6E21ABF652200F4AC7C /* Question26.json */; };
 		E8ABE6FF1ABF652200F4AC7C /* Question27.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6E31ABF652200F4AC7C /* Question27.json */; };
 		E8ABE7001ABF652200F4AC7C /* Question0.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ABE6E41ABF652200F4AC7C /* Question0.json */; };
+		E8ABE7031ABF7E3400F4AC7C /* UIView_Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE7021ABF7E3400F4AC7C /* UIView_Blur.m */; };
+		E8ABE7061ABF855800F4AC7C /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE7051ABF855800F4AC7C /* TableViewController.m */; };
+		E8ABE7091ABF8D4500F4AC7C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE7081ABF8D4500F4AC7C /* UIImage+ImageEffects.m */; };
+		E8ABE70C1ABF92AE00F4AC7C /* UINavigationController+Fade.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE70B1ABF92AE00F4AC7C /* UINavigationController+Fade.m */; };
 		E8FD43591ABE1B0700798D03 /* QuestionState.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD43581ABE1B0700798D03 /* QuestionState.m */; };
 		E8FD435C1ABE275E00798D03 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD435B1ABE275E00798D03 /* GameViewController.m */; };
 		E8FD435F1ABE2A7100798D03 /* GameQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FD435E1ABE2A7100798D03 /* GameQuestionViewController.m */; };
@@ -137,6 +141,14 @@
 		E8ABE6E21ABF652200F4AC7C /* Question26.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question26.json; path = Data/Question26.json; sourceTree = "<group>"; };
 		E8ABE6E31ABF652200F4AC7C /* Question27.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question27.json; path = Data/Question27.json; sourceTree = "<group>"; };
 		E8ABE6E41ABF652200F4AC7C /* Question0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question0.json; path = Data/Question0.json; sourceTree = "<group>"; };
+		E8ABE7011ABF7E3400F4AC7C /* UIView_Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIView_Blur.h; path = Extensions/UIView_Blur.h; sourceTree = "<group>"; };
+		E8ABE7021ABF7E3400F4AC7C /* UIView_Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIView_Blur.m; path = Extensions/UIView_Blur.m; sourceTree = "<group>"; };
+		E8ABE7041ABF855800F4AC7C /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		E8ABE7051ABF855800F4AC7C /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		E8ABE7071ABF8D4500F4AC7C /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "Extensions/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		E8ABE7081ABF8D4500F4AC7C /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "Extensions/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		E8ABE70A1ABF92AE00F4AC7C /* UINavigationController+Fade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Fade.h"; path = "Extensions/UINavigationController+Fade.h"; sourceTree = "<group>"; };
+		E8ABE70B1ABF92AE00F4AC7C /* UINavigationController+Fade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Fade.m"; path = "Extensions/UINavigationController+Fade.m"; sourceTree = "<group>"; };
 		E8FD43571ABE1B0700798D03 /* QuestionState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionState.h; path = Model/QuestionState.h; sourceTree = "<group>"; };
 		E8FD43581ABE1B0700798D03 /* QuestionState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionState.m; path = Model/QuestionState.m; sourceTree = "<group>"; };
 		E8FD435A1ABE275E00798D03 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
@@ -170,8 +182,14 @@
 		CF3BA1A81ABCEC8500756873 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E8ABE7071ABF8D4500F4AC7C /* UIImage+ImageEffects.h */,
+				E8ABE7081ABF8D4500F4AC7C /* UIImage+ImageEffects.m */,
 				CF3BA1A51ABCEC8000756873 /* NSMutableArray_Shuffling.h */,
 				CF3BA1A61ABCEC8000756873 /* NSMutableArray_Shuffling.m */,
+				E8ABE7011ABF7E3400F4AC7C /* UIView_Blur.h */,
+				E8ABE7021ABF7E3400F4AC7C /* UIView_Blur.m */,
+				E8ABE70A1ABF92AE00F4AC7C /* UINavigationController+Fade.h */,
+				E8ABE70B1ABF92AE00F4AC7C /* UINavigationController+Fade.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -279,6 +297,8 @@
 				E8ABE6C41ABF2C5100F4AC7C /* GameOverViewController.m */,
 				E8ABE6C61ABF52DB00F4AC7C /* HighScoreViewController.h */,
 				E8ABE6C71ABF52DB00F4AC7C /* HighScoreViewController.m */,
+				E8ABE7041ABF855800F4AC7C /* TableViewController.h */,
+				E8ABE7051ABF855800F4AC7C /* TableViewController.m */,
 			);
 			path = "BEPiD-03-quiz";
 			sourceTree = "<group>";
@@ -452,6 +472,10 @@
 			files = (
 				CFE57B101ABA2BD1008C09C3 /* Game.m in Sources */,
 				CF3BA1A11ABCD2AC00756873 /* HighScoreManager.m in Sources */,
+				E8ABE7091ABF8D4500F4AC7C /* UIImage+ImageEffects.m in Sources */,
+				E8ABE7031ABF7E3400F4AC7C /* UIView_Blur.m in Sources */,
+				E8ABE7061ABF855800F4AC7C /* TableViewController.m in Sources */,
+				E8ABE70C1ABF92AE00F4AC7C /* UINavigationController+Fade.m in Sources */,
 				E8FD43621ABE2A9000798D03 /* GameOptionsViewController.m in Sources */,
 				CF3BA1A41ABCD2E800756873 /* Score.m in Sources */,
 				CFE57B161ABA3012008C09C3 /* Answer.m in Sources */,

@@ -16,7 +16,7 @@
 @implementation GameViewController
 
 - (void) endGame {
-    GameOverViewController* itemViewController = (GameOverViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"game_over"];
+    GameOverViewController* itemViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"game_over"];
     itemViewController.game = self.game;
     [self showViewController:itemViewController sender:self];
 }

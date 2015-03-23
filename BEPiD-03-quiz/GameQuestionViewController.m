@@ -10,6 +10,7 @@
 #import "QuestionState.h"
 #import "Answer.h"
 #import "GameOverViewController.h"
+#import "StudentOpinion.h"
 
 @interface GameQuestionViewController () {
     QuestionState* qs;
@@ -22,11 +23,6 @@
 @end
 
 @implementation GameQuestionViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
 - (void)viewWillAppear:(BOOL)animated {
     [self reload];
@@ -50,6 +46,10 @@
                                                   delegate: self
                                          cancelButtonTitle:@"Não"
                                          otherButtonTitles:@"Sim", nil];
+    
+    UILabel* btn= [[UILabel alloc] init];
+    btn.text = @"Teste";
+    [alert addSubview:btn];
     
     alert.tag = number;
     [alert show];
@@ -91,28 +91,23 @@
     else
         cell.textLabel.textColor = [UIColor blackColor];
     
+    cell.detailTextLabel.textColor = [UIColor lightGrayColor];
+    
+    if (item.studentOpinion)
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Aluno de %@ - %d%% de confiança", item.studentOpinion.course, (int)(item.studentOpinion.certainty * 100)];
+    else
+        cell.detailTextLabel.text = nil;
+    
     return cell;
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //if (_selectedRow == indexPath.row) {
-        NSInteger row = indexPath.row;
-        Answer* resp = [qs.question getAnswer:row];
-        [self userAnswer: resp number:row];
-    //}
+    NSInteger row = indexPath.row;
+    Answer* resp = [qs.question getAnswer:row];
+    [self userAnswer: resp number:row];
     
     _selectedRow = indexPath.row;
     return indexPath;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

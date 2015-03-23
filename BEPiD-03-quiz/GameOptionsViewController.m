@@ -8,10 +8,14 @@
 
 #import "GameOptionsViewController.h"
 #import "QuestionState.h"
+#import "TableViewController.h"
+#import "UIView_Blur.h"
+#import "UINavigationController+Fade.h"
 
 @interface GameOptionsViewController () {
     NSString* _optionAvailableOnce;
     NSString* _optionAlreadyUsed;
+    NSArray* students;
 }
 @property (weak, nonatomic) IBOutlet UILabel *lblQuestion;
 
@@ -33,20 +37,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     _optionAvailableOnce = @"Esta opção só pode ser utilizada uma única vez.";
     _optionAlreadyUsed = @"Esta opção já foi utilizada.";
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewWillAppear:(BOOL)animated {
+    students = [self.game.currentQuestion.question getStudents];
     self.lblQuestion.text = self.game.currentQuestion.question.text;
     
     [self updateSkipOption];
+    [self updateHelpFromStudentsOption];
     [self updateRemove2WrongAnswersOptions];
     [self updateLeaveOption];
 }
@@ -56,7 +57,7 @@
 }
 
 - (void) updateHelpFromStudentsOption {
-    self.btnAskStudents.enabled = [self.game canAskStudents];
+    self.btnAskStudents.enabled = [self.game canAskStudent];
     if (self.btnAskStudents.enabled)
         self.lblAskStudentsDescription.text = _optionAvailableOnce;
     else
@@ -64,6 +65,12 @@
 }
 
 - (IBAction)helpFromStudents:(id)sender {
+    TableViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"table_view"];
+    vc.bgImage = [self.view blur];
+    vc.delegate = self;
+    vc.dataSource = self;
+    
+    [self.navigationController pushFadeViewController:vc];
 }
 
 - (void) updateSkipOption {
@@ -111,6 +118,30 @@
     self.btnLeaveGame.enabled = [self.game canLeave];
     self.btnLeaveGame.hidden =
     self.lblLeaveGameDescription.hidden = ![self.game canLeave];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return students.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"studentCell"];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"studentCell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+    }
+    
+    cell.textLabel.text = students[indexPath.row];
+    return cell;
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSInteger row = indexPath.row;
+    [self.game askStudent:students[row]];
+    [self.navigationController fadePopViewController];
+    [self.tabBarController setSelectedIndex:0];
+    return indexPath;
 }
 
 @end
