@@ -128,7 +128,7 @@
 }
 
 - (void) showHighscore: (int) index {
-    [HighScoreController showViewReseting:YES fromController:self];
+    [HighScoreController showViewReseting:YES fromController:self highlighting: [NSNumber numberWithInt:index]];
 }
 
 #pragma mark - Picker View

@@ -20,10 +20,12 @@
 
 @implementation HighScoreController
 
-+ (void)showViewReseting:(BOOL)backToRoot fromController:(UIViewController *)fromVC {
++ (void)showViewReseting:(BOOL)backToRoot fromController:(UIViewController *)fromVC highlighting: (NSNumber*) highlightId {
     TableViewController* vc = [fromVC.storyboard instantiateViewControllerWithIdentifier:@"table_view"];
-    vc.bgImage = [fromVC.view blur: 24];
+    vc.bgImage = [fromVC.view blur: 32];
     HighScoreController* dataAndDelegate = [[HighScoreController alloc] init];
+    if (highlightId)
+        dataAndDelegate.markScore = [highlightId intValue];
     vc.delegate = dataAndDelegate;
     vc.dataSource = dataAndDelegate;
     [vc setBackToRoot:backToRoot];

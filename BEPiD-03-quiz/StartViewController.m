@@ -52,7 +52,7 @@
 }
 
 - (IBAction)showHighscore:(id)sender {
-    [HighScoreController showViewReseting:NO fromController:self];
+    [HighScoreController showViewReseting:NO fromController:self highlighting:nil];
 }
 
 @end

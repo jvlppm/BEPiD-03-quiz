@@ -11,7 +11,7 @@
 
 @interface HighScoreController : NSObject<UITableViewDataSource, UITableViewDelegate>
 
-+ (void) showViewReseting: (BOOL) backToRoot fromController: (UIViewController*) fromVC;
++ (void)showViewReseting:(BOOL)backToRoot fromController:(UIViewController *)fromVC highlighting: (NSNumber*) highlightId;
 
 @property int markScore;
 
