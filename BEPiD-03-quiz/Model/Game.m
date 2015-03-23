@@ -58,6 +58,7 @@
 }
 
 - (void) answer:(Answer *)userAnswer {
+    [self validateStatus];
     QuestionState* current = self.currentQuestion;
     if ([userAnswer.question correctAnswer: userAnswer]) {
         int points = current.prize;
@@ -80,6 +81,11 @@
     _usingHelp = NO;
 }
 
+
+- (void) giveUp {
+    _status = GaveUp;
+}
+
 - (SkipStatus) canSkip {
     if (_usedSkip)
         return CannotSkipAgain;
@@ -89,6 +95,7 @@
 }
 
 - (void) skip {
+    [self validateStatus];
     if ([self canSkip] != CanSkip) {
         [NSException raise:@"Skip cannot be used" format:@"Skip move not allowed"];
     }
@@ -110,6 +117,7 @@
 }
 
 - (void)askStudent:(NSString *)course{
+    [self validateStatus];
     if (![self canAskStudent]) {
         [NSException raise:@"Help cannot be used" format:@"Student help already used"];
     }
@@ -131,6 +139,7 @@
 }
 
 - (void) eliminateAnswers: (int) quantity {
+    [self validateStatus];
     if (![self canEliminateAnswers]) {
         [NSException raise:@"Eliminate wrong answers option already used" format:@"This options can only be used once"];
     }
@@ -140,6 +149,11 @@
     QuestionState* current = self.currentQuestion;
     [current.question eliminateWrongAnswers: quantity];
     current.prize /= 2;
+}
+
+- (void) validateStatus {
+    if (_status != InGame)
+        [NSException raise:@"Invalid game status" format:@"Game already finished"];
 }
 
 #pragma mark - Helper Methods
@@ -220,7 +234,7 @@
             [_selectedQuestions addObject:gameQuestion];
         }
         
-        prize *= 10;
+        prize *= 4;
     }
 }
 

@@ -53,6 +53,7 @@
 }
 
 - (IBAction)finishGame:(id)sender {
+    [self.game giveUp];
     [self endGame];
 }
 

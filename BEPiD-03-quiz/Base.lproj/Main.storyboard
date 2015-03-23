@@ -74,7 +74,16 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ese-Dw-vRy" kind="show" id="ktB-uh-uXh"/>
+                                            <segue destination="ese-Dw-vRy" kind="show" identifier="high_score" id="ktB-uh-uXh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-JY-hN2">
+                                        <rect key="frame" x="253" y="120" width="95" height="30"/>
+                                        <state key="normal" title="Voltar ao jogo">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="J5Z-Yz-Ou9" kind="show" identifier="resume_game" id="LwG-Lq-Mqt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -84,6 +93,8 @@
                                     <constraint firstAttribute="centerX" secondItem="W1o-1Q-ikm" secondAttribute="centerX" id="Lo5-SV-khk"/>
                                     <constraint firstItem="W1o-1Q-ikm" firstAttribute="top" secondItem="4W7-N6-LYT" secondAttribute="bottom" constant="20" id="MHQ-I2-guO"/>
                                     <constraint firstAttribute="centerX" secondItem="4W7-N6-LYT" secondAttribute="centerX" id="avi-nG-0h3"/>
+                                    <constraint firstAttribute="centerX" secondItem="9h7-JY-hN2" secondAttribute="centerX" constant="-0.5" id="ik7-G8-aJC"/>
+                                    <constraint firstItem="9h7-JY-hN2" firstAttribute="top" secondItem="W1o-1Q-ikm" secondAttribute="bottom" constant="20" id="kfD-Ga-tgq"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5L-6G-g3D">
@@ -135,10 +146,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZoP-hU-4c3"/>
+                    <connections>
+                        <outlet property="btnResumeGame" destination="9h7-JY-hN2" id="GpZ-dF-HBU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="370"/>
+            <point key="canvasLocation" x="1030" y="370"/>
         </scene>
         <!--Opcoes-->
         <scene sceneID="h06-Ch-BHo">
@@ -766,4 +780,7 @@
         <image name="475333-announce-128.png" width="32" height="32"/>
         <image name="modifier-128.png" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="LwG-Lq-Mqt"/>
+    </inferredMetricsTieBreakers>
 </document>

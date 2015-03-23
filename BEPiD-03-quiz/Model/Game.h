@@ -17,6 +17,7 @@ typedef enum : NSUInteger {
     InGame,
     Lost,
     Won,
+    GaveUp,
 } GameStatus;
 
 typedef enum : NSUInteger {
@@ -48,5 +49,7 @@ typedef enum : NSUInteger {
 - (void) askStudent: (NSString*) course;
 
 - (BOOL) canLeave;
+
+- (void) giveUp;
 
 @end
